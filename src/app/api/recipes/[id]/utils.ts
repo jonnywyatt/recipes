@@ -1,4 +1,4 @@
-const pluralise = ({ units, quantity }) => {
+const pluralise = ({ units, quantity }: any) => {
   if (!units) return '';
   const isPlural =
     typeof quantity === 'number' ? quantity > 1 : quantity.max > 1;

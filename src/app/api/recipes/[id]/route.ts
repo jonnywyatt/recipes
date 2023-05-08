@@ -1,4 +1,4 @@
-import { recipesData } from './data';
+import { recipesData } from '../../../data/recipes';
 import { formatQuantity } from './utils';
 import { NextResponse } from 'next/server';
 

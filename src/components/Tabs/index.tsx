@@ -36,7 +36,7 @@ export function Tabs({
       selectedTab,
       tabsPrefix,
     }),
-    [selectedTab, selectTab]
+    [selectedTab, selectTab, tabsPrefix]
   );
 
   return (
@@ -99,7 +99,7 @@ export function Tab({
 }: {
   tab: string;
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }) {
   const { selectedTab, selectTab, tabsPrefix } = React.useContext(TabsContext);
 
@@ -110,7 +110,7 @@ export function Tab({
       aria-controls={`tab-${tabsPrefix}-tabpanel-${tab}`}
       onClick={() => selectTab(tab)}
       tabIndex={selectedTab === tab ? 0 : -1}
-      className={`${styles.tab} ${className}`}
+      className={`${styles.tab} ${className || ''}`}
       type="button"
     >
       {children}

@@ -1,7 +1,7 @@
 const HOST = 'http://localhost:3000';
 export async function getData(url: string) {
   try {
-    const res = await fetch(`${HOST}${url}`, { cache: 'no-store' });
+    const res = await fetch(`${HOST}${url}`);
     if (!res.ok) {
       throw new Error(res.statusText);
     }

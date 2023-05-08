@@ -1,4 +1,4 @@
-import { recipesData } from './[id]/data';
+import { recipesData } from '../../data/recipes';
 import { Recipe } from '@/app/api/api';
 import { NextResponse } from 'next/server';
 

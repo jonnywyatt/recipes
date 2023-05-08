@@ -1,37 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import { tagsData } from '@/app/data/tags';
 
-export const tagsData = [
-  {
-    id: 'fibre',
-    label: 'Fibre',
-  },
-  {
-    id: 'meaty',
-    label: 'Meaty',
-  },
-
-  {
-    id: 'side-dish',
-    label: 'Side dish',
-  },
-
-  {
-    id: 'chilli',
-    label: 'Chilli',
-  },
-
-  {
-    id: 'protein',
-    label: 'Protein',
-  },
-
-  {
-    id: 'fish',
-    label: 'Fish',
-  },
-];
-
-export async function GET(req: NextApiRequest) {
+export async function GET(req: NextRequest) {
   return NextResponse.json(tagsData);
 }
