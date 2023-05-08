@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .imageWrapper {
   position: relative;
   padding-bottom: clamp(40%, 60vw, 50%);
@@ -13,18 +15,12 @@
   height: 100%;
   object-fit: cover;
 }
+
 .title {
   font-family: var(--font-stack-heading);
   font-size: clamp(1.5rem, 6vw, 2.5rem);
   font-weight: normal;
   color: var(--grey-2);
   margin-bottom: var(--spacing-unit-3);
-  &:after {
-    content: '';
-    display: block;
-    width: 20%;
-    height: 1px;
-    background-color: var(--green-dark);
-    margin-top: var(--spacing-unit-3);
-  }
+  @include underline;
 }

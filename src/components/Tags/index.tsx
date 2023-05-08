@@ -1,4 +1,4 @@
-import styles from './Tags.module.css';
+import styles from './Tags.module.scss';
 import React from 'react';
 import { Tag } from '@/components/Tag';
 import { Api } from '@/app/api/api';

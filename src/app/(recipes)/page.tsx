@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import styles from './page.module.css';
+import styles from './page.module.scss';
 import { getData } from '@/app/utils/getData';
 import { Tags } from '@/components/Tags';
 import Link from 'next/link';
-import header from '@/app/styles/header.module.css';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
