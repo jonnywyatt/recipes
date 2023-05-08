@@ -1,0 +1,21 @@
+.container {
+  margin-top: var(--spacing-unit-2);
+  margin-bottom: var(--spacing-unit-8);
+}
+
+.slicedLogo {
+  display: block;
+  width: clamp(70px, 17%, 120px);
+}
+
+.furl {
+  display: block;
+  aspect-ratio: 163 / 14;
+  width: clamp(160px, 50%, 500px);
+}
+
+.logo {
+  display: block;
+  aspect-ratio: 64/28;
+  width: clamp(70px, 17%, 120px);
+}

@@ -1,0 +1,54 @@
+.tabList {
+  display: flex;
+}
+
+.tab {
+  flex: 1;
+}
+
+// specific to this design
+.tabList {
+  background-color: var(--grey-7);
+}
+
+.tab {
+  color: var(--grey-2);
+  font-size: var(--font-size-14);
+  text-transform: uppercase;
+  padding-top: calc(var(--spacing-unit-2) + 2px);
+  padding-bottom: var(--spacing-unit-2);
+  padding-left: var(--grid-gutter-width);
+  padding-right: var(--grid-gutter-width);
+  text-align: left;
+  border: 1px solid transparent;
+}
+
+.tab[aria-selected="true"] {
+  background-color: var(--white);
+  border-top-color: var(--green-dark);
+  color: var(--grey-2)
+}
+
+.tab[aria-selected="true"]:first-child {
+  border-right: 1px solid var(--green-dark);
+  border-top-right-radius: var(--spacing-unit-4);
+}
+
+.tab[aria-selected="true"]:last-child {
+  border-left: 1px solid var(--green-dark);
+  border-top-left-radius: var(--spacing-unit-4);
+}
+
+.tab[aria-selected="false"] {
+  border-bottom-color: var(--green-dark);
+}
+
+.tab:last-child {
+  padding-left: var(--spacing-unit-5);
+}
+
+.tabPanel {
+  color: var(--grey-2);
+  font-size: var(--font-size-14);
+  padding: var(--spacing-unit-6) var(--grid-gutter-width);
+}

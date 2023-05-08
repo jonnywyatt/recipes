@@ -1,0 +1,5 @@
+.Tags {
+  display: flex;
+  gap: var(--spacing-unit-1);
+  margin-bottom: var(--spacing-unit-1);
+}

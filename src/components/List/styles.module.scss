@@ -1,0 +1,15 @@
+
+.list {
+  color: var(--grey-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  line-height: 1.4em;
+  margin-bottom: var(--spacing-unit-3);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
