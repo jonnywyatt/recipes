@@ -4,6 +4,7 @@ import flex from './styles/flex.module.css';
 import header from './styles/header.module.css';
 import footer from './styles/footer.module.scss';
 import spacing from './styles/spacing.module.css';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Sliced - Recipes',
@@ -20,11 +21,13 @@ export default async function RootLayout({
         <div className={grid.fullWidthWithMargins}>
           <header className={`${grid.gridColumnCenter} ${header.container}`}>
             <div className={flex.flexSpaceBetween}>
-              <img
-                className={header.slicedLogo}
-                src={'/logo-sliced.svg'}
-                alt="Sliced logo"
-              />
+              <Link href="/" className={header.logoWrapper}>
+                <img
+                  className={header.slicedLogo}
+                  src={'/logo-sliced.svg'}
+                  alt="Sliced logo"
+                />
+              </Link>
               <img
                 className={header.logo}
                 src={'/logo-slices.svg'}

@@ -25,13 +25,8 @@ export default async function Recipe({ params }: PageProps) {
         <div
           className={`${spacing.paddingBottom4} ${colours.backgroundSecondary}`}
         >
-          <div className={styles.image}>
-            <Image
-              src={recipe.src}
-              alt={recipe.title}
-              fill={true}
-              style={{ objectFit: 'cover' }}
-            />
+          <div className={styles.imageWrapper}>
+            <img className={styles.image} src={recipe.src} alt={recipe.title} />
           </div>
         </div>
         <Tabs defaultSelectedTab="tab1">

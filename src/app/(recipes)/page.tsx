@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import { getData } from '@/app/utils/getData';
 import { Tags } from '@/components/Tags';
 import Link from 'next/link';
+import header from '@/app/styles/header.module.css';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
@@ -22,13 +23,12 @@ export default async function Home({ searchParams }: PageProps) {
             <div key={recipe.id} className={styles.item}>
               <h2 className={styles.title}>{recipe.title}</h2>
               <Tags tags={recipe.tags} />
-              <div className={styles.image}>
+              <div className={styles.imageWrapper}>
                 <Link href={`/recipes/${recipe.id}`}>
-                  <Image
+                  <img
+                    className={styles.image}
                     src={recipe.src}
                     alt={recipe.title}
-                    fill={true}
-                    style={{ objectFit: 'cover' }}
                   />
                 </Link>
               </div>

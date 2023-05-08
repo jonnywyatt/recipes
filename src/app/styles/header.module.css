@@ -5,13 +5,18 @@
 
 .slicedLogo {
   display: block;
-  width: clamp(70px, 17%, 120px);
+  width: 100%;
 }
 
 .furl {
   display: block;
   aspect-ratio: 163 / 14;
   width: clamp(160px, 50%, 500px);
+}
+
+.logoWrapper {
+  display: block;
+  width: clamp(70px, 17%, 120px);
 }
 
 .logo {
