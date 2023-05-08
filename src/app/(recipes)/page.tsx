@@ -4,6 +4,7 @@ import { getData } from '@/app/utils/getData';
 import { Tags } from '@/components/Tags';
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
 interface PageProps {
   searchParams?: { [key: string]: string | string[] | undefined };
 }

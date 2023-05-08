@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
-
+export const dynamic = 'force-dynamic';
 interface PageProps {
   params: { [key: string]: string | undefined };
 }
