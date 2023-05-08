@@ -1,5 +1,19 @@
 @import "../../styles/mixins";
 
+$breakpointL: 1025px;
+
+@media (min-width: $breakpointL) {
+  .contentWrapper {
+    display: flex;
+  }
+}
+
+.imageContainer {
+  padding-bottom: var(--spacing-unit-4);
+  background-color: var(--background-secondary);
+}
+
+
 .imageWrapper {
   position: relative;
   padding-bottom: clamp(40%, 60vw, 50%);
@@ -9,6 +23,20 @@
   border-bottom: 1px solid var(--grey-1);
 }
 
+@media (min-width: $breakpointL) {
+  .imageContainer {
+    background-color: transparent;
+  }
+
+  .imageContainer,
+  .content {
+    flex-basis: 50%;
+  }
+
+  .imageWrapper {
+    padding-bottom: 80%;
+  }
+}
 .image {
   position: absolute;
   width: 100%;
