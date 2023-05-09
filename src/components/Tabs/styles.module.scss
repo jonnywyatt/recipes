@@ -1,3 +1,5 @@
+@import "../../app/styles/mixins";
+
 .tabList {
   display: flex;
 }
@@ -52,4 +54,11 @@
   color: var(--grey-2);
   font-size: clamp(var(--font-size-14), 3vw, var(--font-size-16));
   padding: var(--spacing-unit-6) var(--grid-gutter-width);
+}
+
+@media (min-width: $breakpointL) {
+  .tab,
+  .tabPanel {
+    padding-left: calc(var(--grid-gutter-width) * 2)
+  }
 }

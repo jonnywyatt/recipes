@@ -1,7 +1,5 @@
 @import "../../styles/mixins";
 
-$breakpointL: 1025px;
-
 .title {
   font-family: var(--font-stack-heading);
   font-size: clamp(1.5rem, 6vw, 2rem);
