@@ -11,7 +11,7 @@
 .furl {
   display: block;
   aspect-ratio: 163 / 14;
-  width: clamp(160px, 50%, 400px);
+  width: clamp(160px, 30%, 200px);
 }
 
 .logoWrapper {
