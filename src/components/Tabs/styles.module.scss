@@ -18,7 +18,7 @@
   font-family: var(--font-stack-heading);
   font-size: clamp(var(--font-size-14), 4vw, var(--font-size-16));
   text-transform: uppercase;
-  padding-top: calc(var(--spacing-unit-2) + 2px);
+  padding-top: calc(var(--spacing-unit-2) + 4px);
   padding-bottom: var(--spacing-unit-2);
   padding-left: var(--grid-gutter-width);
   padding-right: var(--grid-gutter-width);

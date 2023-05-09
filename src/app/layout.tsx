@@ -4,6 +4,7 @@ import flex from './styles/flex.module.css';
 import header from './styles/header.module.css';
 import footer from './styles/footer.module.scss';
 import spacing from './styles/spacing.module.css';
+import styles from './layout.module.scss';
 import Link from 'next/link';
 
 export const metadata = {
@@ -37,9 +38,7 @@ export default async function RootLayout({
             <img className={header.furl} src={'/furl.svg'} alt="" />
           </header>
         </div>
-        <div
-          className={`${grid.fullWidthWithMargins} ${spacing.paddingBottom10}`}
-        >
+        <div className={`${grid.fullWidthWithMargins} ${styles.main}`}>
           {children}
         </div>
         <footer
