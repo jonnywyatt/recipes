@@ -14,7 +14,7 @@
 .tab {
   color: var(--grey-2);
   font-family: var(--font-stack-heading);
-  font-size: var(--font-size-14);
+  font-size: clamp(var(--font-size-14), 4vw, var(--font-size-16));
   text-transform: uppercase;
   padding-top: calc(var(--spacing-unit-2) + 2px);
   padding-bottom: var(--spacing-unit-2);
@@ -50,6 +50,6 @@
 
 .tabPanel {
   color: var(--grey-2);
-  font-size: var(--font-size-14);
+  font-size: clamp(var(--font-size-14), 3vw, var(--font-size-16));
   padding: var(--spacing-unit-6) var(--grid-gutter-width);
 }

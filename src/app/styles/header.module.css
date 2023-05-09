@@ -11,16 +11,16 @@
 .furl {
   display: block;
   aspect-ratio: 163 / 14;
-  width: clamp(160px, 50%, 500px);
+  width: clamp(160px, 50%, 400px);
 }
 
 .logoWrapper {
   display: block;
-  width: clamp(70px, 17%, 120px);
+  width: clamp(70px, 15%, 100px);
 }
 
 .logo {
   display: block;
   aspect-ratio: 64/28;
-  width: clamp(70px, 17%, 120px);
+  width: clamp(70px, 15%, 100px);
 }
