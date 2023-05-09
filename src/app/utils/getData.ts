@@ -4,7 +4,7 @@ export const HOST = isProd
   : 'http://localhost:3000';
 export async function getData(url: string) {
   try {
-    const res = await fetch(`${HOST}${url}`);
+    const res = await fetch(`${HOST}${url}`, { cache: 'no-store' });
     if (!res.ok) {
       throw new Error(res.statusText);
     }
