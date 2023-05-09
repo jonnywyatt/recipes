@@ -2,7 +2,7 @@ export const recipesData = [
   {
     id: '1',
     title: 'Sausage casserole',
-    src: 'http://localhost:3000/images/recipes/kale-sausage.webp',
+    src: '/images/recipes/kale-sausage.webp',
     tags: [
       {
         id: 'fibre',
@@ -79,7 +79,7 @@ export const recipesData = [
   {
     id: '2',
     title: 'Roasted squash',
-    src: 'http://localhost:3000/images/recipes/squash-pancetta.jpg',
+    src: '/images/recipes/squash-pancetta.jpg',
     tags: [
       {
         id: 'fibre',
@@ -98,7 +98,7 @@ export const recipesData = [
   {
     id: '3',
     title: 'Nasi goreng',
-    src: 'http://localhost:3000/images/recipes/nasi-goreng.jpg',
+    src: '/images/recipes/nasi-goreng.jpg',
     tags: [
       {
         id: 'chilli',
@@ -113,7 +113,7 @@ export const recipesData = [
   {
     id: '4',
     title: 'Broad bean salad',
-    src: 'http://localhost:3000/images/recipes/broad-bean-salad.jpg',
+    src: '/images/recipes/broad-bean-salad.jpg',
     tags: [
       {
         id: 'fibre',
@@ -132,7 +132,7 @@ export const recipesData = [
   {
     id: '5',
     title: 'Tuna niçoise',
-    src: 'http://localhost:3000/images/recipes/tuna-nicoise.jpg',
+    src: '/images/recipes/tuna-nicoise.jpg',
     tags: [
       {
         id: 'fish',

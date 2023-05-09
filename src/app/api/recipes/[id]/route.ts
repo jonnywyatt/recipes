@@ -2,7 +2,7 @@ import { recipesData } from '../../../data/recipes';
 import { formatQuantity } from './utils';
 import { NextResponse } from 'next/server';
 
-import { ingredientsData } from './ingredients';
+import { ingredientsData } from '../../../data/ingredients';
 import { IngredientDetails, Recipe } from '@/app/api/api';
 
 export async function GET(
