@@ -1,6 +1,6 @@
 .container {
   margin-top: var(--spacing-unit-2);
-  margin-bottom: var(--spacing-unit-8);
+  margin-bottom: var(--spacing-unit-6);
 }
 
 .slicedLogo {
@@ -14,13 +14,16 @@
   width: clamp(160px, 30%, 200px);
 }
 
-.logoWrapper {
+@mixin logo {
   display: block;
-  width: clamp(70px, 15%, 100px);
+  width: clamp(90px, 15%, 100px);
+
+}
+.logoWrapper {
+  @include logo;
 }
 
 .logo {
-  display: block;
   aspect-ratio: 64/28;
-  width: clamp(70px, 15%, 100px);
+  @include logo;
 }
