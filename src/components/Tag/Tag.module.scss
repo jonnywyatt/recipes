@@ -6,10 +6,9 @@
   font-size: var(--font-size-10);
   color: var(--grey-3);
   text-transform: uppercase;
-}
-
-.Tag:hover,
-.Tag:focus {
-  border-color: var(--grey-2);
-  color: var(--grey-1);
+  &.isSelected, {
+    color: var(--white);
+    background-color: var(--grey-3);
+    border-color: var(--grey-3);
+  }
 }

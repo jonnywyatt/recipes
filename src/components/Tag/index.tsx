@@ -1,15 +1,15 @@
-import styles from './Tag.module.css';
+import styles from './Tag.module.scss';
 import React from 'react';
-import { ReactFCWithChildren } from '@/react';
 import Link from 'next/link';
+import { DecoratedTag } from '@/app/api/api';
 
-interface Props {
-  id: string;
-}
-export const Tag: ReactFCWithChildren<Props> = ({ children, id }) => {
+export const Tag: React.FC<DecoratedTag> = ({ id, isSelected, label }) => {
   return (
-    <Link className={styles.Tag} href={`?tags=${id}`}>
-      {children}
+    <Link
+      className={`${styles.Tag} ${isSelected ? styles.isSelected : ''}`}
+      href={isSelected ? '/' : `?tags=${id}`}
+    >
+      {label}
     </Link>
   );
 };

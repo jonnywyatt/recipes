@@ -4,10 +4,10 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const tagId = searchParams && searchParams.get('tag');
-  const filtered = tagId
+  const tagIds = searchParams && searchParams.get('tags');
+  const filtered = tagIds
     ? recipesData.filter((recipe: Recipe) =>
-        recipe.tags.some(({ id }) => id === tagId)
+        recipe.tags.some(({ id }) => tagIds.includes(id))
       )
     : recipesData;
   return NextResponse.json(filtered);

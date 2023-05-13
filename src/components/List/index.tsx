@@ -6,6 +6,7 @@ interface Props {
 }
 
 export const List: ReactFCWithChildren<Props> = ({ list }) => {
+  if (!list) return <></>;
   return (
     <ol className={styles.list}>
       {list.map((item) => (

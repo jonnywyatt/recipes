@@ -1,14 +1,12 @@
 import styles from './Tags.module.scss';
 import React from 'react';
 import { Tag } from '@/components/Tag';
-import { Api } from '@/app/api/api';
-export const Tags: React.FC<{ tags: Api.Tag[] }> = ({ tags }) => {
+import { DecoratedTag } from '@/app/api/api';
+export const Tags: React.FC<{ tags: DecoratedTag[] }> = ({ tags }) => {
   return (
     <div className={styles.Tags}>
-      {tags.map(({ id, label }: Api.Tag) => (
-        <Tag key={id} id={id}>
-          {label}
-        </Tag>
+      {tags.map((props: DecoratedTag) => (
+        <Tag key={props.id} {...props} />
       ))}
     </div>
   );

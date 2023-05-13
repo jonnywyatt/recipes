@@ -1,5 +1,5 @@
 import { getData } from '@/app/utils/getData';
-import styles from './recipe.module.scss';
+import styles from './page.module.scss';
 import grid from '@/app/styles/grid.module.css';
 import spacing from '../../styles/spacing.module.css';
 import Image from 'next/image';
