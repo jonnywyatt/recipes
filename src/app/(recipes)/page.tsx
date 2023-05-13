@@ -4,23 +4,22 @@ import { Tags } from '@/components/Tags';
 import Link from 'next/link';
 import grid from '@/app/styles/grid.module.css';
 import { Api } from '@/app/api/api';
-import { parseSelectedTags } from '@/app/(recipes)/parseSelectedTags';
+import {
+  decorateTags,
+  getRecipes,
+  parseSelectedTags,
+} from '@/app/(recipes)/utils';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
+
 export default async function Home({ searchParams }: PageProps) {
-  const allTags = await getData('/api/tags');
   const selectedTags = parseSelectedTags(searchParams.tags);
-  const url = selectedTags.length
-    ? `/api/recipes?tags=${selectedTags.join(',')}`
-    : '/api/recipes';
-  const decoratedTags = allTags.map((tag: Api.Tag) => ({
-    ...tag,
-    isSelected: selectedTags.includes(tag.id),
-  }));
-  const recipes = await getData(url);
+  const allTags = await getData('/api/tags');
+  const recipes = await getRecipes(selectedTags);
+  const decoratedTags = decorateTags({ allTags, selectedTags });
   return (
     <main className={grid.gridColumnCenter}>
       <div className={styles.tagWrapper}>
