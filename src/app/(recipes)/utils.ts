@@ -1,4 +1,5 @@
-import { Api } from '@/app/api/api';
+import qs from 'qs';
+import { Api, DecoratedTag } from '@/app/api/api';
 import Tag = Api.Tag;
 import { getData } from '@/app/utils/getData';
 
@@ -22,6 +23,7 @@ export const decorateTags = ({
   allTags.map((tag: Api.Tag) => ({
     ...tag,
     isSelected: selectedTags.includes(tag.id),
+    href: '/',
   }));
 
 export const getRecipes = async (selectedTags: string[]) => {
@@ -29,4 +31,32 @@ export const getRecipes = async (selectedTags: string[]) => {
     ? `/api/recipes?tags=${selectedTags.join(',')}`
     : '/api/recipes';
   return getData(url);
+};
+
+export type QsMap = Record<string, string | string[] | undefined>;
+
+export const makeQueryString = ({
+  tags,
+  val,
+}: {
+  tags: DecoratedTag[];
+  val: string;
+}) => {
+  const updatedTags = tags.map((tag) => {
+    if (tag.id === val) {
+      return {
+        ...tag,
+        isSelected: !tag.isSelected,
+      };
+    }
+    return tag;
+  });
+  const selectedTags = updatedTags
+    .filter((tag) => tag.isSelected)
+    .map((tag) => tag.id);
+  const queryString = qs.stringify(
+    { tags: selectedTags },
+    { arrayFormat: 'repeat' }
+  );
+  return queryString ? `?${queryString}` : '/';
 };

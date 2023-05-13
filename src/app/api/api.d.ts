@@ -7,6 +7,7 @@ namespace Api {
 
 export interface DecoratedTag extends Api.Tag {
   isSelected: boolean;
+  href: string;
 }
 
 export interface Recipe {

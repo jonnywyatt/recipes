@@ -3,16 +3,17 @@ import { getData } from '@/app/utils/getData';
 import { Tags } from '@/components/Tags';
 import Link from 'next/link';
 import grid from '@/app/styles/grid.module.css';
-import { Api } from '@/app/api/api';
 import {
   decorateTags,
   getRecipes,
   parseSelectedTags,
+  QsMap,
 } from '@/app/(recipes)/utils';
+import { TagsMultiSelect } from '@/components/Tags/TagsMultiSelect';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: QsMap;
 }
 
 export default async function Home({ searchParams }: PageProps) {
@@ -23,7 +24,7 @@ export default async function Home({ searchParams }: PageProps) {
   return (
     <main className={grid.gridColumnCenter}>
       <div className={styles.tagWrapper}>
-        <Tags tags={decoratedTags} />
+        <TagsMultiSelect tags={decoratedTags} />
       </div>
       <div className={styles.list}>
         {

@@ -3,11 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import { DecoratedTag } from '@/app/api/api';
 
-export const Tag: React.FC<DecoratedTag> = ({ id, isSelected, label }) => {
+export const Tag: React.FC<DecoratedTag> = ({ isSelected, label, href }) => {
   return (
     <Link
       className={`${styles.Tag} ${isSelected ? styles.isSelected : ''}`}
-      href={isSelected ? '/' : `?tags=${id}`}
+      href={href}
     >
       {label}
     </Link>

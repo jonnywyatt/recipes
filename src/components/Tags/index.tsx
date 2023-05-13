@@ -6,7 +6,7 @@ export const Tags: React.FC<{ tags: DecoratedTag[] }> = ({ tags }) => {
   return (
     <div className={styles.Tags}>
       {tags.map((props: DecoratedTag) => (
-        <Tag key={props.id} {...props} />
+        <Tag key={props.id} {...props} href={`?tags=${props.id}`} />
       ))}
     </div>
   );
