@@ -4,6 +4,7 @@ import { Tags } from '@/components/Tags';
 import Link from 'next/link';
 import grid from '@/app/styles/grid.module.css';
 import {
+  countLabelSuffix,
   decorateTags,
   getRecipes,
   parseSelectedTags,
@@ -25,6 +26,10 @@ export default async function Home({ searchParams }: PageProps) {
     <main className={grid.gridColumnCenter}>
       <div className={styles.tagWrapper}>
         <TagsMultiSelect tags={decoratedTags} />
+      </div>
+      <div className={styles.resultsCount}>
+        {recipes.length}{' '}
+        {countLabelSuffix({ count: recipes.length, label: 'recipe' })}
       </div>
       <div className={styles.list}>
         {

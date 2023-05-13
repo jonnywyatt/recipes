@@ -44,3 +44,11 @@
   color: var(--grey-2);
   margin-bottom: var(--spacing-unit-2);
 }
+
+.resultsCount {
+  font-size: var(--font-size-10);
+  font-weight: normal;
+  color: var(--grey-2);
+  margin-bottom: var(--spacing-unit-4);
+  text-transform: uppercase;
+}

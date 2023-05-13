@@ -60,3 +60,11 @@ export const makeQueryString = ({
   );
   return queryString ? `?${queryString}` : '/';
 };
+
+export const countLabelSuffix = ({
+  count,
+  label,
+}: {
+  count: number;
+  label: string;
+}) => `${label}${count === 1 ? '' : 's'}`;
