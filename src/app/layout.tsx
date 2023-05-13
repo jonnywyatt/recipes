@@ -3,12 +3,15 @@ import grid from './styles/grid.module.css';
 import flex from './styles/flex.module.css';
 import header from './styles/header.module.scss';
 import footer from './styles/footer.module.scss';
-import spacing from './styles/spacing.module.css';
 import styles from './layout.module.scss';
 import Link from 'next/link';
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Sliced - Recipes',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default async function RootLayout({
