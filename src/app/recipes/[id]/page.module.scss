@@ -26,8 +26,7 @@
   padding-bottom: clamp(40%, 60vw, 50%);
   width: 100%;
   object-fit: contain;
-  border-top: 1px solid var(--grey-1);
-  border-bottom: 1px solid var(--grey-1);
+  @include imageBorder;
 }
 
 @media (min-width: $breakpointL) {

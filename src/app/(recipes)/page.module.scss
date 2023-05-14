@@ -27,6 +27,7 @@
 .imageWrapper {
   padding-bottom: 100%;
   position: relative;
+  @include imageBorder;
 }
 
 .image {

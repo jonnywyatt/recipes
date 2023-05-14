@@ -10,6 +10,10 @@
   }
 }
 
+@mixin imageBorder {
+  border: 1px solid var(--grey-3);
+}
+
 
 $breakpointXS: 480px;
 $breakpointL: 1025px;
