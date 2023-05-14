@@ -13,6 +13,7 @@ export const recipesData = [
         label: 'Meaty',
       },
     ],
+    preparationTimeMin: 45,
     ingredients: {
       main: [
         {
@@ -90,6 +91,7 @@ export const recipesData = [
         label: 'Side dish',
       },
     ],
+    preparationTimeMin: 35,
     ingredients: {
       main: [],
       flavourBoosters: [],
@@ -105,6 +107,7 @@ export const recipesData = [
         label: 'Chilli',
       },
     ],
+    preparationTimeMin: 30,
     ingredients: {
       main: [],
       flavourBoosters: [],
@@ -124,6 +127,7 @@ export const recipesData = [
         label: 'Protein',
       },
     ],
+    preparationTimeMin: 20,
     ingredients: {
       main: [],
       flavourBoosters: [],
@@ -133,6 +137,7 @@ export const recipesData = [
     id: '5',
     title: 'Tuna niçoise',
     src: '/images/recipes/tuna-nicoise.jpg',
+    preparationTimeMin: 25,
     tags: [
       {
         id: 'fish',

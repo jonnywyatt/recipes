@@ -1,11 +1,13 @@
 import { getData } from '@/app/utils/getData';
 import styles from './page.module.scss';
 import grid from '@/app/styles/grid.module.css';
+import flex from '@/app/styles/flex.module.css';
 import spacing from '../../styles/spacing.module.css';
-import Image from 'next/image';
 import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
+import { PreparationTime } from '@/components/PreparationTime';
+
 export const dynamic = 'force-dynamic';
 interface PageProps {
   params: { [key: string]: string | undefined };
@@ -36,6 +38,9 @@ export default async function Recipe({ params }: PageProps) {
               <List list={recipe.ingredients.main} />
             </TabPanel>
             <TabPanel tab="tab2">
+              <div className={spacing.marginBottom5}>
+                <PreparationTime time={recipe.preparationTimeMin} />
+              </div>
               <List list={recipe.steps} />
             </TabPanel>
           </Tabs>

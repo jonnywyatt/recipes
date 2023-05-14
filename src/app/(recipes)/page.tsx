@@ -10,7 +10,9 @@ import {
   parseSelectedTags,
   QsMap,
 } from '@/app/(recipes)/utils';
+import spacing from '@/app/styles/spacing.module.css';
 import { TagsMultiSelect } from '@/components/Tags/TagsMultiSelect';
+import { PreparationTime } from '@/components/PreparationTime';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
@@ -38,7 +40,10 @@ export default async function Home({ searchParams }: PageProps) {
             return (
               <div key={recipe.id} className={styles.item}>
                 <h2 className={styles.title}>{recipe.title}</h2>
-                <Tags tags={recipe.tags} />
+                <div className={styles.tagsPrepTime}>
+                  <Tags tags={recipe.tags} />
+                  <PreparationTime time={recipe.preparationTimeMin} />
+                </div>
                 <div className={styles.imageWrapper}>
                   <Link href={`/recipes/${recipe.id}`}>
                     <img
