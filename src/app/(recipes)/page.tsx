@@ -7,10 +7,10 @@ import {
   countLabelSuffix,
   decorateTags,
   getRecipes,
+  makeImageSrcSet,
   parseSelectedTags,
   QsMap,
 } from '@/app/(recipes)/utils';
-import spacing from '@/app/styles/spacing.module.css';
 import { TagsMultiSelect } from '@/components/Tags/TagsMultiSelect';
 import { PreparationTime } from '@/components/PreparationTime';
 
@@ -50,6 +50,8 @@ export default async function Home({ searchParams }: PageProps) {
                       className={styles.image}
                       src={recipe.src}
                       alt={recipe.title}
+                      srcSet={makeImageSrcSet(recipe.images)}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                   </Link>
                 </div>

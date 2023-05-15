@@ -2,7 +2,10 @@ export const recipesData = [
   {
     id: '1',
     title: 'Sausage casserole',
-    src: '/images/recipes/kale-sausage.webp',
+    images: [
+      { fileName: 'kale-sausage-640.jpg', width: 640 },
+      { fileName: 'kale-sausage-1100.jpg', width: 1600 },
+    ],
     tags: [
       {
         id: 'fibre',
@@ -80,7 +83,10 @@ export const recipesData = [
   {
     id: '2',
     title: 'Roasted squash',
-    src: '/images/recipes/squash-pancetta.jpg',
+    images: [
+      { fileName: 'squash-pancetta-640.jpg', width: 640 },
+      { fileName: 'squash-pancetta-1600.jpg', width: 1600 },
+    ],
     tags: [
       {
         id: 'fibre',
@@ -100,7 +106,10 @@ export const recipesData = [
   {
     id: '3',
     title: 'Nasi goreng',
-    src: '/images/recipes/nasi-goreng.jpg',
+    images: [
+      { fileName: 'nasi-goreng-640.jpg', width: 640 },
+      { fileName: 'nasi-goreng-1600.jpg', width: 1600 },
+    ],
     tags: [
       {
         id: 'chilli',
@@ -116,7 +125,10 @@ export const recipesData = [
   {
     id: '4',
     title: 'Broad bean salad',
-    src: '/images/recipes/broad-bean-salad.jpg',
+    images: [
+      { fileName: 'broad-bean-salad-640.jpg', width: 640 },
+      { fileName: 'broad-bean-salad-1600.jpg', width: 1600 },
+    ],
     tags: [
       {
         id: 'fibre',
@@ -136,7 +148,10 @@ export const recipesData = [
   {
     id: '5',
     title: 'Tuna niçoise',
-    src: '/images/recipes/tuna-nicoise.jpg',
+    images: [
+      { fileName: 'tuna-nicoise-640.jpg', width: 640 },
+      { fileName: 'tuna-nicoise-1600.jpg', width: 1600 },
+    ],
     preparationTimeMin: 25,
     tags: [
       {

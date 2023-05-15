@@ -68,3 +68,11 @@ export const countLabelSuffix = ({
   count: number;
   label: string;
 }) => `${label}${count === 1 ? '' : 's'}`;
+
+export const makeImageSrcSet = (
+  imageData: { fileName: string; width: number }[]
+) => {
+  return imageData
+    .map(({ fileName, width }) => `/images/${fileName} ${width}w`)
+    .join(', ');
+};

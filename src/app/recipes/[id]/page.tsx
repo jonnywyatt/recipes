@@ -7,6 +7,7 @@ import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
 import { PreparationTime } from '@/components/PreparationTime';
+import { makeImageSrcSet } from '@/app/(recipes)/utils';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
@@ -25,7 +26,13 @@ export default async function Recipe({ params }: PageProps) {
       <div className={`${grid.fullBleed} ${styles.contentWrapper}`}>
         <div className={styles.imageContainer}>
           <div className={styles.imageWrapper}>
-            <img className={styles.image} src={recipe.src} alt={recipe.title} />
+            <img
+              className={styles.image}
+              src={recipe.src}
+              alt={recipe.title}
+              srcSet={makeImageSrcSet(recipe.images)}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
         </div>
         <div className={styles.content}>
