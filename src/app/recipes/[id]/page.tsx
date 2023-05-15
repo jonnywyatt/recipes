@@ -46,7 +46,10 @@ export default async function Recipe({ params }: PageProps) {
             </TabPanel>
             <TabPanel tab="tab2">
               <div className={spacing.marginBottom5}>
-                <PreparationTime time={recipe.preparationTimeMin} />
+                <PreparationTime
+                  time={recipe.preparationTimeMin}
+                  isLarge={true}
+                />
               </div>
               <List list={recipe.steps} />
             </TabPanel>

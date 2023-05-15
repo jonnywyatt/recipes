@@ -1,8 +1,19 @@
 import styles from './styles.module.scss';
-export const PreparationTime = ({ time }: { time: number }) => {
+export const PreparationTime = ({
+  time,
+  isLarge,
+}: {
+  time: number;
+  isLarge?: boolean;
+}) => {
   return (
-    <div className={styles.wrapper}>
-      <img src="/icons/alarm.svg" alt="Alarm clock icon" />
+    <div className={`${styles.wrapper} ${isLarge ? styles.wrapperLarge : ''}`}>
+      <img
+        src="/icons/alarm.svg"
+        alt="Alarm clock icon"
+        width={isLarge ? '20px' : '16px'}
+        height={isLarge ? '20px' : '16px'}
+      />
       <span className={styles.time}>{time} min</span>
     </div>
   );
