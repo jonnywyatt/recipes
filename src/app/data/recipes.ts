@@ -1,7 +1,7 @@
 export const recipesData = [
   {
     id: '1',
-    title: 'Sausage casserole',
+    title: 'Kale & sausage casserole',
     images: [
       { fileName: 'kale-sausage-640.jpg', width: 640 },
       { fileName: 'kale-sausage-1100.jpg', width: 1600 },

@@ -1,7 +1,6 @@
 import { getData } from '@/app/utils/getData';
 import styles from './page.module.scss';
 import grid from '@/app/styles/grid.module.css';
-import flex from '@/app/styles/flex.module.css';
 import spacing from '../../styles/spacing.module.css';
 import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
