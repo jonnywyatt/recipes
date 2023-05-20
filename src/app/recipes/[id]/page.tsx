@@ -22,6 +22,7 @@ export default async function Recipe({ params }: PageProps) {
         <div className={styles.metaDataWrapper}>
           <Tags tags={recipe.tags} />
           <VegCount count={recipe.vegCount} isLarge={true} />
+          <PreparationTime time={recipe.preparationTimeMin} isLarge={true} />
         </div>
       </div>
       <div className={`${grid.fullBleed} ${styles.contentWrapper}`}>
@@ -46,12 +47,6 @@ export default async function Recipe({ params }: PageProps) {
               <List list={recipe.ingredients.main} />
             </TabPanel>
             <TabPanel tab="tab2">
-              <div className={spacing.marginBottom5}>
-                <PreparationTime
-                  time={recipe.preparationTimeMin}
-                  isLarge={true}
-                />
-              </div>
               <List list={recipe.steps} />
             </TabPanel>
           </Tabs>
