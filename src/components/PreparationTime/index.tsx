@@ -10,7 +10,7 @@ export const PreparationTime = ({
     <div className={`${styles.wrapper} ${isLarge ? styles.wrapperLarge : ''}`}>
       <img
         src="/icons/alarm.svg"
-        alt="Alarm clock icon"
+        alt="Preparation time"
         width={isLarge ? '20px' : '16px'}
         height={isLarge ? '20px' : '16px'}
       />

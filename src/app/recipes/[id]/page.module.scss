@@ -15,6 +15,12 @@
   }
 }
 
+.metaDataWrapper {
+  display: flex;
+  gap: var(--spacing-unit-6);
+  margin-bottom: var(--spacing-unit-3);
+}
+
 .imageContainer {
   padding-bottom: var(--spacing-unit-4);
   background-color: var(--background-secondary);

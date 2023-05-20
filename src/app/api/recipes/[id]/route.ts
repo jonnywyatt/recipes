@@ -3,7 +3,8 @@ import { formatQuantity } from './utils';
 import { NextResponse } from 'next/server';
 
 import { ingredientsData } from '../../../data/ingredients';
-import { IngredientDetails, Recipe } from '@/app/api/api';
+import { Ingredient, IngredientDetails, Recipe } from '@/app/api/api';
+import { getVegCountForRecipe } from './utils';
 
 export async function GET(
   req: Request,
@@ -14,17 +15,22 @@ export async function GET(
   if (!found) {
     return new Response('Not found', { status: 404 });
   }
-  const mainIngredients = found.ingredients.main.map((ingredient) => {
+  const decoratedMainIngredients = found.ingredients.main.map((ingredient) => {
     const ingredientDetail = ingredientsData.find(
       (ingredientData: IngredientDetails) => ingredientData.id === ingredient.id
     );
-    return formatQuantity({ ...ingredient, ...ingredientDetail });
+    return { ...ingredient, ...ingredientDetail };
   });
+  const mainIngredientsList = decoratedMainIngredients.map((ingredient) => {
+    return formatQuantity(ingredient);
+  });
+
   const flavourBoosters = found.ingredients.flavourBoosters.map(
     (item) => item.description
   );
   return NextResponse.json({
     ...found,
-    ingredients: { flavourBoosters, main: mainIngredients },
+    vegCount: getVegCountForRecipe(decoratedMainIngredients as Ingredient[]),
+    ingredients: { flavourBoosters, main: mainIngredientsList },
   });
 }

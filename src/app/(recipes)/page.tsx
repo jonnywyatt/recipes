@@ -13,6 +13,7 @@ import {
 } from '@/app/(recipes)/utils';
 import { TagsMultiSelect } from '@/components/Tags/TagsMultiSelect';
 import { PreparationTime } from '@/components/PreparationTime';
+import { VegCount } from '@/components/VegCount';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
@@ -42,7 +43,10 @@ export default async function Home({ searchParams }: PageProps) {
                 <h2 className={styles.title}>{recipe.title}</h2>
                 <div className={styles.tagsPrepTime}>
                   <Tags tags={recipe.tags} />
-                  <PreparationTime time={recipe.preparationTimeMin} />
+                  <div className={styles.noWrap}>
+                    <VegCount count={recipe.vegCount} />
+                    <PreparationTime time={recipe.preparationTimeMin} />
+                  </div>
                 </div>
                 <div className={styles.imageWrapper}>
                   <Link href={`/recipes/${recipe.id}`}>

@@ -5,20 +5,35 @@ export const ingredientsData = [
     units: {
       standard: 'clove',
     },
+    foodGroup: {
+      category: 'vegetable',
+      countsAsPlant: true,
+    },
   },
   {
     id: '2',
     label: 'Onion',
+    foodGroup: {
+      category: 'vegetable',
+      countsAsPlant: true,
+    },
   },
   {
     id: '3',
     label: 'Carrot',
+    foodGroup: {
+      category: 'vegetable',
+      countsAsPlant: true,
+    },
   },
   {
     id: '4',
     label: 'Extra virgin olive oil',
     units: {
       standard: 'tbsp',
+    },
+    foodGroup: {
+      category: 'oil',
     },
   },
   {
@@ -27,12 +42,20 @@ export const ingredientsData = [
     units: {
       standard: 'handful',
     },
+    foodGroup: {
+      category: 'vegetable',
+      countsAsPlant: true,
+    },
   },
   {
     id: '6',
     label: 'Cavolo nero',
     units: {
       standard: 'handful',
+    },
+    foodGroup: {
+      category: 'vegetable',
+      countsAsPlant: true,
     },
   },
   {
@@ -41,6 +64,10 @@ export const ingredientsData = [
     units: {
       standard: 'mug',
     },
+    foodGroup: {
+      category: 'grain',
+      countsAsPlant: true,
+    },
   },
   {
     id: '8',
@@ -48,14 +75,25 @@ export const ingredientsData = [
     units: {
       standard: 'mug',
     },
+    foodGroup: {
+      category: 'grain',
+      countsAsPlant: true,
+    },
   },
   {
     id: '9',
     label: 'Pork sausages',
+    foodGroup: {
+      category: 'meat',
+      subcategory: 'red',
+    },
   },
   {
     id: '10',
     label: 'Vegetable stock cube',
+    foodGroup: {
+      category: 'stock',
+    },
   },
   {
     id: '11',
@@ -75,9 +113,17 @@ export const ingredientsData = [
   {
     id: '13',
     label: 'Sage',
+    foodGroup: {
+      category: 'herb',
+      countsAsPlant: true,
+    },
   },
   {
     id: '14',
     label: 'Oregano',
+    foodGroup: {
+      category: 'herb',
+      countsAsPlant: true,
+    },
   },
 ];

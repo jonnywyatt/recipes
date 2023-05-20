@@ -1,3 +1,5 @@
+import { Ingredient } from '@/app/api/api';
+
 const pluralise = ({ units, quantity }: any) => {
   if (!units) return '';
   const isPlural =
@@ -17,4 +19,9 @@ export const formatQuantity = ({ quantity, units, label }: any) => {
     return `${label} (${formattedQuantity} ${unit})`;
   }
   return `${formattedQuantity} ${label.toLowerCase()}`;
+};
+export const getVegCountForRecipe = (ingredients: Ingredient[]) => {
+  return ingredients.filter(
+    (ingredient) => ingredient.foodGroup?.countsAsPlant === true
+  ).length;
 };

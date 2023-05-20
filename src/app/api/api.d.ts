@@ -28,6 +28,10 @@ export interface Recipe {
 
 interface Ingredient {
   id: string;
+  foodGroup: {
+    category: 'vegetable' | 'herb' | 'grain' | 'stock';
+    countsAsPlant?: boolean;
+  };
 }
 
 export interface IngredientDetails {

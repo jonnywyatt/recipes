@@ -7,6 +7,7 @@ import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
 import { PreparationTime } from '@/components/PreparationTime';
 import { makeImageSrcSet } from '@/app/(recipes)/utils';
+import { VegCount } from '@/components/VegCount';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
@@ -18,8 +19,9 @@ export default async function Recipe({ params }: PageProps) {
     <>
       <div className={grid.gridColumnCenter}>
         <h1 className={styles.title}>{recipe.title}</h1>
-        <div className={spacing.marginBottom3}>
+        <div className={styles.metaDataWrapper}>
           <Tags tags={recipe.tags} />
+          <VegCount count={recipe.vegCount} isLarge={true} />
         </div>
       </div>
       <div className={`${grid.fullBleed} ${styles.contentWrapper}`}>

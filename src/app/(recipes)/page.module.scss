@@ -57,7 +57,12 @@
 .tagsPrepTime {
   margin-bottom: var(--spacing-unit-3);
   display: flex;
-  gap: var(--spacing-unit-12);
   align-items: center;
   justify-content: space-between;
+}
+
+.noWrap {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--spacing-unit-3);
 }
