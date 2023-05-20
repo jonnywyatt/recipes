@@ -20,6 +20,7 @@ export interface Recipe {
   title: string;
   images: Image[];
   tags: Tag[];
+  vegCount?: number;
   ingredients: {
     main: Ingredient[];
     flavourBoosters: any[];
@@ -28,7 +29,7 @@ export interface Recipe {
 
 interface Ingredient {
   id: string;
-  foodGroup: {
+  foodGroup?: {
     category: 'vegetable' | 'herb' | 'grain' | 'stock';
     countsAsPlant?: boolean;
   };
