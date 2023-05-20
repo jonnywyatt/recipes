@@ -7,6 +7,7 @@
   color: var(--grey-3);
   text-transform: uppercase;
   white-space: nowrap;
+  line-height: 1.4;
   &.isSelected, {
     color: var(--white);
     background-color: var(--grey-3);

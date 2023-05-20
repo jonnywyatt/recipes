@@ -1,14 +1,13 @@
 .wrapper {
   display: flex;
-  gap: var(--spacing-unit-1);
+  gap: 3px;
   align-items: center;
   flex-wrap: nowrap;
 }
 
-.time {
+.label {
   font-size: var(--font-size-12);
   color: var(--grey-3b);
-  text-transform: uppercase;
   white-space: nowrap;
   .wrapperLarge & {
     font-size: var(--font-size-13);

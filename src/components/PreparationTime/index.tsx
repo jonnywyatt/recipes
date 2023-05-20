@@ -14,7 +14,7 @@ export const PreparationTime = ({
         width={isLarge ? '20px' : '16px'}
         height={isLarge ? '20px' : '16px'}
       />
-      <span className={styles.time}>{time} min</span>
+      <span className={styles.label}>{time}m</span>
     </div>
   );
 };
