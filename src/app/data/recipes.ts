@@ -82,7 +82,7 @@ export const recipesData = [
   },
   {
     id: '2',
-    title: 'Roasted squash',
+    title: 'Roasted squash with prosciutto',
     images: [
       { fileName: 'squash-pancetta-640.jpg', width: 640 },
       { fileName: 'squash-pancetta-1600.jpg', width: 1600 },
@@ -93,15 +93,63 @@ export const recipesData = [
         label: 'Fibre',
       },
       {
-        id: 'side-dish',
-        label: 'Side dish',
+        id: 'chilli',
+        label: 'Chilli',
       },
     ],
     preparationTimeMin: 35,
     ingredients: {
-      main: [],
+      main: [
+        {
+          id: '15',
+          quantity: 1,
+        },
+        {
+          id: '16',
+        },
+        {
+          id: '17',
+        },
+        {
+          id: '18',
+          quantity: 1,
+        },
+        {
+          id: '19',
+          quantity: 1,
+        },
+        {
+          id: '20',
+          quantity: { min: 5, max: 10 },
+          alternatives: [{ id: '21' }],
+        },
+        {
+          id: '22',
+          quantity: 4,
+        },
+        {
+          id: '4',
+          quantity: 6,
+        },
+        {
+          id: '23',
+          quantity: 4,
+        },
+        {
+          id: '24',
+        },
+      ],
       flavourBoosters: [],
     },
+    steps: [
+      'Preheat the oven to 190°C / gas 5.',
+      'Peel and chop the squash into 3cm pieces and place in a roasting tin.',
+      'Season with olive oil, ground coriander seeds, salt, pepper and chilli.',
+      'Roast for 30 minutes then allow to cool slightly.',
+      'Tear up the prosciutto and scatter it and the rocket over the squash.',
+      'Drizzle with olive oil and balsamic vinegar.',
+      'Use a vegetable peeler or grater to shave the pecorino cheese over the top.',
+    ],
   },
   {
     id: '3',

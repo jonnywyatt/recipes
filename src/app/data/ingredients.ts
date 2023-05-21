@@ -126,4 +126,96 @@ export const ingredientsData = [
       countsAsPlant: true,
     },
   },
+  {
+    id: '15',
+    label: 'Butternut squash',
+    foodGroup: {
+      category: 'vegetable',
+      countsAsPlant: true,
+    },
+  },
+  {
+    id: '16',
+    label: 'sea salt',
+    foodGroup: {
+      countsAsPlant: false,
+    },
+  },
+  {
+    id: '17',
+    label: 'ground black pepper',
+    foodGroup: {
+      countsAsPlant: true,
+    },
+  },
+  {
+    id: '18',
+    label: 'dried red chilli',
+    foodGroup: {
+      foodGroup: 'spice',
+      countsAsPlant: true,
+    },
+  },
+  {
+    id: '19',
+    label: 'coriander seeds',
+    foodGroup: {
+      foodGroup: 'spice',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'tsp',
+    },
+  },
+  {
+    id: '20',
+    label: 'prosciutto',
+    foodGroup: {
+      foodGroup: 'meat',
+      countsAsPlant: false,
+    },
+    units: {
+      standard: 'slice',
+    },
+  },
+  {
+    id: '21',
+    label: 'parma ham',
+    foodGroup: {
+      foodGroup: 'meat',
+      countsAsPlant: false,
+    },
+    units: {
+      standard: 'slice',
+    },
+  },
+  {
+    id: '22',
+    label: 'rocket',
+    foodGroup: {
+      foodGroup: 'vegetable',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'handful',
+    },
+  },
+  {
+    id: '23',
+    label: 'balsamic vinegar',
+    foodGroup: {
+      countsAsPlant: false,
+    },
+    units: {
+      standard: 'tbsp',
+    },
+  },
+  {
+    id: '24',
+    label: 'pecorino cheese',
+    foodGroup: {
+      foodGroup: 'cheese',
+      countsAsPlant: false,
+    },
+  },
 ];

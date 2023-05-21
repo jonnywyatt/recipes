@@ -7,10 +7,14 @@ const pluralise = ({ units, quantity }: any) => {
   if (!isPlural) return units.standard;
   return units.standardPlural || `${units.standard}s`;
 };
-export const formatQuantity = ({ quantity, units, label }: any) => {
-  const formattedQuantity =
-    typeof quantity === 'number' ? quantity : `${quantity.min}-${quantity.max}`;
 
+const formatQuantity = ({ quantity }: any) => {
+  if (typeof quantity === 'undefined') return '';
+  if (typeof quantity === 'number') return quantity;
+  return `${quantity.min}-${quantity.max}`;
+};
+export const formatIngredient = ({ quantity, units, label }: any) => {
+  const formattedQuantity = formatQuantity({ quantity });
   const unit = pluralise({
     units,
     quantity,

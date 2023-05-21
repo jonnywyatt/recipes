@@ -1,5 +1,5 @@
 import { recipesData } from '../../../data/recipes';
-import { formatQuantity } from './utils';
+import { formatIngredient } from './utils';
 import { NextResponse } from 'next/server';
 
 import { ingredientsData } from '../../../data/ingredients';
@@ -22,7 +22,7 @@ export async function GET(
     return { ...ingredient, ...ingredientDetail };
   });
   const mainIngredientsList = decoratedMainIngredients.map((ingredient) => {
-    return formatQuantity(ingredient);
+    return formatIngredient(ingredient);
   });
 
   const flavourBoosters = found.ingredients.flavourBoosters.map(
