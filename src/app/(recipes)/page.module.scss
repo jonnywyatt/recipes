@@ -1,5 +1,12 @@
 @import "../styles/mixins";
 
+.loading {
+  font-family: var(--font-stack-heading);
+  font-size: var(--font-size-22);
+  font-weight: normal;
+  color: var(--grey-4);
+}
+
 .tagWrapper {
   margin-bottom: var(--spacing-unit-4);
   @include underline;
