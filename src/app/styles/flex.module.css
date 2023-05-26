@@ -3,3 +3,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.flexGap2Units {
+  gap: var(--spacing-unit-2);
+}

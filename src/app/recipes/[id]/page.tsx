@@ -1,7 +1,7 @@
 import { getData } from '@/app/utils/getData';
 import styles from './page.module.scss';
 import grid from '@/app/styles/grid.module.css';
-import spacing from '../../styles/spacing.module.css';
+import flex from '../../styles/flex.module.css';
 import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
@@ -21,8 +21,10 @@ export default async function Recipe({ params }: PageProps) {
         <h1 className={styles.title}>{recipe.title}</h1>
         <div className={styles.metaDataWrapper}>
           <Tags tags={recipe.tags} />
-          <VegCount count={recipe.vegCount} isLarge={true} />
-          <PreparationTime time={recipe.preparationTimeMin} isLarge={true} />
+          <div className={`${flex.flexSpaceBetween} ${flex.flexGap2Units}`}>
+            <VegCount count={recipe.vegCount} isLarge={true} />
+            <PreparationTime time={recipe.preparationTimeMin} isLarge={true} />
+          </div>
         </div>
       </div>
       <div className={`${grid.fullBleed} ${styles.contentWrapper}`}>
