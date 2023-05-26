@@ -14,10 +14,7 @@ export const VegCount = ({
         width={isLarge ? '20px' : '18px'}
         height={isLarge ? '20px' : '18px'}
       />
-      <span className={styles.label}>
-        {count}
-        {isLarge ? ' plant ingredients' : ''}
-      </span>
+      <span className={styles.label}>{count} plants</span>
     </div>
   );
 };
