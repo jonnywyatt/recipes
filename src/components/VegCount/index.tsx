@@ -1,4 +1,5 @@
 import styles from './styles.module.scss';
+import Link from 'next/link';
 export const VegCount = ({
   count,
   isLarge,
@@ -14,7 +15,16 @@ export const VegCount = ({
         width={isLarge ? '20px' : '18px'}
         height={isLarge ? '20px' : '18px'}
       />
-      <span className={styles.label}>{count} plants</span>
+      <span className={styles.label}>
+        {count}{' '}
+        <Link
+          title="Click for more info on what counts as a plant"
+          className={styles.infoLink}
+          href="/plants"
+        >
+          plants
+        </Link>
+      </span>
     </div>
   );
 };
