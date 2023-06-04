@@ -1,12 +1,8 @@
 @import "../../styles/mixins";
 
-.title {
-  font-family: var(--font-stack-heading);
-  font-size: clamp(1.5rem, 6vw, 2rem);
-  font-weight: normal;
-  color: var(--grey-2b);
-  margin-bottom: var(--spacing-unit-3);
-  @include underline;
+.heading {
+  @include heading;
+  @include headingLarge;
 }
 
 @media (min-width: $breakpointL) {

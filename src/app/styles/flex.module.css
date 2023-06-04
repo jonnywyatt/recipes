@@ -4,6 +4,6 @@
   justify-content: space-between;
 }
 
-.flexGap2Units {
-  gap: var(--spacing-unit-2);
+.flexGap4Units {
+  gap: var(--spacing-unit-4);
 }

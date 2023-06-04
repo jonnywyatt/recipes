@@ -46,10 +46,8 @@
 }
 
 .title {
-  font-family: var(--font-stack-heading);
+  @include heading;
   font-size: var(--font-size-21);
-  font-weight: normal;
-  color: var(--grey-2b);
   margin-bottom: var(--spacing-unit-2);
 }
 

@@ -14,6 +14,17 @@
   border: 1px solid var(--grey-3);
 }
 
+@mixin heading {
+  font-family: var(--font-stack-heading);
+  font-weight: normal;
+  color: var(--grey-2b);
+}
+
+@mixin headingLarge {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  margin-bottom: var(--spacing-unit-3);
+  @include underline;
+}
 
 $breakpointXS: 480px;
 $breakpointM: 768px;

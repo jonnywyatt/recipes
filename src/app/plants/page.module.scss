@@ -1,0 +1,14 @@
+@import "../styles/mixins";
+
+.heading {
+  @include heading;
+  @include headingLarge;
+}
+
+.textBlock {
+  margin-top: var(--spacing-unit-8);
+  p {
+    color: var(--grey-2b);
+    margin-bottom: var(--spacing-unit-4);
+  }
+}

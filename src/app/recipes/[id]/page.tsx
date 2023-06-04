@@ -18,10 +18,10 @@ export default async function Recipe({ params }: PageProps) {
   return (
     <>
       <div className={grid.gridColumnCenter}>
-        <h1 className={styles.title}>{recipe.title}</h1>
+        <h1 className={styles.heading}>{recipe.title}</h1>
         <div className={styles.metaDataWrapper}>
           <Tags tags={recipe.tags} />
-          <div className={`${flex.flexSpaceBetween} ${flex.flexGap2Units}`}>
+          <div className={`${flex.flexSpaceBetween} ${flex.flexGap4Units}`}>
             <VegCount count={recipe.vegCount} isLarge={true} />
             <PreparationTime time={recipe.preparationTimeMin} isLarge={true} />
           </div>
