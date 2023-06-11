@@ -10,11 +10,11 @@
 
 // specific to this design
 .tabList {
-  background-color: var(--grey-7);
+  background-color: var( --background-secondary);
 }
 
 .tab {
-  color: var(--grey-2);
+  color: var(--text-primary);
   font-family: var(--font-stack-heading);
   font-size: clamp(var(--font-size-14), 4vw, var(--font-size-16));
   text-transform: uppercase;
@@ -25,29 +25,28 @@
   text-align: left;
   border: 1px solid transparent;
   @media (min-width: $breakpointM) {
-    padding-top: calc(var(--spacing-unit-4) + 4px);
-    padding-bottom: calc(var(--spacing-unit-3) + 4px);
+    padding-top: var(--spacing-unit-4);
+    padding-bottom: var(--spacing-unit-3);
   }
 }
 
 .tab[aria-selected="true"] {
-  background-color: var(--white);
-  border-top-color: var(--green-dark);
-  color: var(--grey-2)
+  background-color: var(--background-primary);
+  border-top-color: var(--border-primary);
 }
 
 .tab[aria-selected="true"]:first-child {
-  border-right: 1px solid var(--green-dark);
+  border-right: 1px solid var(--border-primary);
   border-top-right-radius: var(--spacing-unit-4);
 }
 
 .tab[aria-selected="true"]:last-child {
-  border-left: 1px solid var(--green-dark);
+  border-left: 1px solid var(--border-primary);
   border-top-left-radius: var(--spacing-unit-4);
 }
 
 .tab[aria-selected="false"] {
-  border-bottom-color: var(--green-dark);
+  border-bottom-color: var(--border-primary);
 }
 
 .tab:last-child {
@@ -55,7 +54,7 @@
 }
 
 .tabPanel {
-  color: var(--grey-2);
+  color: var(--text-primary);
   font-size: clamp(var(--font-size-14), 3vw, var(--font-size-16));
   padding: var(--spacing-unit-6) var(--grid-gutter-width);
 }

@@ -4,8 +4,6 @@
 }
 
 .slicedLogo {
-  display: block;
-  width: 100%;
 }
 
 .furl {
@@ -17,10 +15,16 @@
 @mixin logo {
   display: block;
   width: clamp(90px, 15%, 100px);
-
 }
+
 .logoWrapper {
   @include logo;
+  color: var(--text-primary);
+  display: block;
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .logo {

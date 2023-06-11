@@ -1,5 +1,6 @@
 import styles from './styles.module.scss';
 import Link from 'next/link';
+import { IconLeaf } from '@/images/icons/IconLeaf';
 export const VegCount = ({
   count,
   isLarge,
@@ -9,12 +10,7 @@ export const VegCount = ({
 }) => {
   return (
     <div className={`${styles.wrapper} ${isLarge ? styles.wrapperLarge : ''}`}>
-      <img
-        src="/icons/leaf.svg"
-        alt="Number of plant ingredients"
-        width={isLarge ? '20px' : '18px'}
-        height={isLarge ? '20px' : '18px'}
-      />
+      <IconLeaf width={isLarge ? 20 : 18} height={isLarge ? 20 : 18} />
       <span className={styles.label}>
         {count}{' '}
         <Link

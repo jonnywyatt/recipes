@@ -6,6 +6,7 @@ import footer from './styles/footer.module.scss';
 import styles from './layout.module.scss';
 import Link from 'next/link';
 import Head from 'next/head';
+import { LogoSliced } from '@/images/logos/LogoSliced';
 
 export const metadata = {
   title: 'Sliced - Recipes',
@@ -26,11 +27,7 @@ export default async function RootLayout({
           <header className={`${grid.gridColumnCenter} ${header.container}`}>
             <div className={flex.flexSpaceBetween}>
               <Link href="/" className={header.logoWrapper}>
-                <img
-                  className={header.slicedLogo}
-                  src={'/logo-sliced.svg'}
-                  alt="Sliced logo"
-                />
+                <LogoSliced />
               </Link>
               <img
                 className={header.logo}
