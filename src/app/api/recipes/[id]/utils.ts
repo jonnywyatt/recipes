@@ -8,9 +8,19 @@ const pluralise = ({ units, quantity }: any) => {
   return units.standardPlural || `${units.standard}s`;
 };
 
+const convertToFraction = (decimal: number) => {
+  switch (decimal) {
+    case 0.25:
+      return '1/4';
+    case 0.5:
+      return '1/2';
+    default:
+      return decimal;
+  }
+};
 const formatQuantity = ({ quantity }: any) => {
   if (typeof quantity === 'undefined') return '';
-  if (typeof quantity === 'number') return quantity;
+  if (typeof quantity === 'number') return convertToFraction(quantity);
   return `${quantity.min}-${quantity.max}`;
 };
 export const formatIngredient = ({ quantity, units, label }: any) => {

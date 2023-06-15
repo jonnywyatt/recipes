@@ -150,7 +150,8 @@ export const ingredientsData = [
   },
   {
     id: '18',
-    label: 'dried red chilli',
+    label: 'Red chilli',
+    state: 'dried',
     foodGroup: {
       foodGroup: 'spice',
       countsAsPlant: true,
@@ -216,6 +217,97 @@ export const ingredientsData = [
     foodGroup: {
       foodGroup: 'cheese',
       countsAsPlant: false,
+    },
+  },
+  {
+    id: '25',
+    label: 'Red cabbage',
+    foodGroup: {
+      foodGroup: 'vegetable',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'handful',
+    },
+  },
+  {
+    id: '26',
+    label: 'Red onion',
+    foodGroup: {
+      category: 'vegetable',
+      countsAsPlant: true,
+    },
+  },
+  {
+    id: '27',
+    label: 'Coriander',
+    foodGroup: {
+      foodGroup: 'herb',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'handful',
+    },
+  },
+  {
+    id: '28',
+    label: 'Lime',
+    foodGroup: {
+      category: 'fruit',
+      countsAsPlant: true,
+    },
+  },
+  {
+    id: '29',
+    label: 'Peas',
+    state: 'frozen',
+    foodGroup: {
+      foodGroup: 'vegetable',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'handful',
+    },
+  },
+  {
+    id: '30',
+    label: 'Broad beans',
+    state: 'frozen',
+    foodGroup: {
+      foodGroup: 'vegetable',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'handful',
+    },
+  },
+  {
+    id: '31',
+    label: 'Red chilli',
+    foodGroup: {
+      foodGroup: 'vegetable',
+      countsAsPlant: true,
+    },
+  },
+  {
+    id: '32',
+    label: 'Mint',
+    foodGroup: {
+      foodGroup: 'herb',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'handful',
+    },
+  },
+  {
+    id: '33',
+    label: 'Feta',
+    foodGroup: {
+      foodGroup: 'cheese',
+    },
+    units: {
+      standard: 'handful',
     },
   },
 ];
