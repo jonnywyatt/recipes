@@ -40,7 +40,9 @@ export default async function Home({ searchParams }: PageProps) {
           recipes.map((recipe) => {
             return (
               <div key={recipe.id} className={styles.item}>
-                <h2 className={styles.title}>{recipe.title}</h2>
+                <h2 className={styles.title}>
+                  <Link href={`/recipes/${recipe.id}`}>{recipe.title}</Link>
+                </h2>
                 <div className={styles.tagsPrepTime}>
                   <Tags tags={recipe.tags} />
                   <div className={styles.noWrap}>
