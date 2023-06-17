@@ -7,3 +7,12 @@
 .flexGap4Units {
   gap: var(--spacing-unit-4);
 }
+
+.flexVerticalCenter {
+  display: flex;
+  align-items: center;
+}
+
+.flexGap1Unit {
+  gap: var(--spacing-unit-1);
+}

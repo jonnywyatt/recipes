@@ -29,6 +29,7 @@ export interface Recipe {
 
 interface Ingredient {
   id: string;
+  label?: string;
   foodGroup?: {
     category: 'vegetable' | 'herb' | 'grain' | 'stock';
     countsAsPlant?: boolean;

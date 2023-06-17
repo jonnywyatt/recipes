@@ -22,7 +22,7 @@ export async function GET(
     return { ...ingredient, ...ingredientDetail };
   });
   const mainIngredientsList = decoratedMainIngredients.map((ingredient) => {
-    return formatIngredient(ingredient);
+    return { ...ingredient, label: formatIngredient(ingredient) };
   });
 
   const flavourBoosters = found.ingredients.flavourBoosters.map(

@@ -8,6 +8,7 @@ import { List } from '@/components/List';
 import { PreparationTime } from '@/components/PreparationTime';
 import { makeImageSrcSet } from '@/app/(recipes)/utils';
 import { VegCount } from '@/components/VegCount';
+import { IconLeaf } from '@/images/icons/IconLeaf';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
@@ -46,10 +47,22 @@ export default async function Recipe({ params }: PageProps) {
               <Tab tab="tab2">Method</Tab>
             </TabList>
             <TabPanel tab="tab1">
-              <List list={recipe.ingredients.main} />
+              <List
+                list={recipe.ingredients.main}
+                renderItem={(item) => (
+                  <div
+                    className={`${flex.flexVerticalCenter} ${flex.flexGap1Unit}`}
+                  >
+                    {item.label}
+                    {item.foodGroup?.countsAsPlant ? (
+                      <IconLeaf width={18} height={18} />
+                    ) : null}
+                  </div>
+                )}
+              />
             </TabPanel>
             <TabPanel tab="tab2">
-              <List list={recipe.steps} />
+              <List list={recipe.steps} renderItem={(item) => <>{item}</>} />
             </TabPanel>
           </Tabs>
         </div>
