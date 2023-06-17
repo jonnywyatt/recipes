@@ -9,12 +9,12 @@
 .furl {
   display: block;
   aspect-ratio: 163 / 14;
-  width: clamp(160px, 30%, 200px);
+  width: clamp(160px, 30%, 300px);
 }
 
 @mixin logo {
   display: block;
-  width: clamp(90px, 15%, 100px);
+  width: clamp(90px, 15%, 120px);
 }
 
 .logoWrapper {
