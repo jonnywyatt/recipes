@@ -1,10 +1,12 @@
 import { Ingredient } from '@/app/api/api';
 
+const unitsNoPlural = ['g', 'ml', 'tsp', 'tbsp'];
 const pluralise = ({ units, quantity }: any) => {
-  if (!units) return '';
+  if (!units || typeof quantity === 'undefined') return '';
   const isPlural =
     typeof quantity === 'number' ? quantity > 1 : quantity.max > 1;
-  if (!isPlural) return units.standard;
+  if (!isPlural || unitsNoPlural.includes(units.standard))
+    return units.standard;
   return units.standardPlural || `${units.standard}s`;
 };
 
