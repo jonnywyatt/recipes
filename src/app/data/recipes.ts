@@ -139,6 +139,96 @@ export const recipesData = [
     ],
   },
   {
+    id: '7',
+    title: 'Kedgeree',
+    images: [
+      { fileName: 'kedgeree-640.jpg', width: 640 },
+      { fileName: 'kedgeree-1600.jpg', width: 1600 },
+    ],
+    tags: [
+      {
+        id: 'protein',
+        label: 'Protein',
+      },
+    ],
+    preparationTimeMin: 30,
+    ingredients: {
+      main: [
+        {
+          id: '34',
+          quantity: 30,
+        },
+        {
+          id: '2',
+          quantity: 1,
+        },
+        {
+          id: '35',
+          quantity: 1,
+        },
+        {
+          id: '36',
+          quantity: 1,
+        },
+        {
+          id: '37',
+          quantity: 1,
+        },
+        {
+          id: '38',
+          quantity: 1,
+        },
+        {
+          id: '1',
+          quantity: 2,
+        },
+        {
+          id: '8',
+          quantity: 2,
+        },
+        {
+          id: '39',
+          quantity: 500,
+        },
+        {
+          id: '40',
+          quantity: 200,
+        },
+        {
+          id: '29',
+          quantity: 2,
+        },
+        {
+          id: '41',
+          quantity: 0.5,
+        },
+        {
+          id: '16',
+        },
+        {
+          id: '17',
+        },
+        {
+          id: '42',
+          quantity: 1,
+        },
+        {
+          id: '43',
+          quantity: 0.5,
+        },
+        {
+          id: '44',
+        },
+      ],
+      flavourBoosters: [],
+    },
+    steps: [
+      'Put a large saucepan on a medium heat, add the ghee or butter and fry the onion for five minutes, stirring occasionally, until softened but not coloured. Add the curry powder, smoked paprika, turmeric, mustard seeds and garlic, and fry for two minutes more.',
+      'Stir in the rice, to coat the grains in spices and fat, then add the stock, cover and bring to a boil. Turn down the heat to a simmer and leave to cook for 15-20 minutes, or until the rice is just cooked (add some boiling water, if necessary).',
+      'Once the rice is cooked, gently stir in the fish, peas and parsley, season to taste and serve with half a boiled egg and a wedge of lemon on each plate, and yoghurt on the side.',
+    ],
+  },
+  {
     id: '1',
     title: 'Kale & sausage casserole',
     images: [

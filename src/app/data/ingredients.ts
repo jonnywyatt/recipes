@@ -310,4 +310,114 @@ export const ingredientsData = [
       standard: 'handful',
     },
   },
+  {
+    id: '34',
+    label: 'Butter',
+    foodGroup: {
+      foodGroup: 'dairy',
+    },
+    units: {
+      standard: 'g',
+    },
+  },
+  {
+    id: '35',
+    label: 'Curry powder',
+    foodGroup: {
+      foodGroup: 'spice',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'tsp',
+    },
+  },
+  {
+    id: '36',
+    label: 'Smoked paprika',
+    foodGroup: {
+      foodGroup: 'spice',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'tsp',
+    },
+  },
+  {
+    id: '37',
+    label: 'Turmeric',
+    foodGroup: {
+      foodGroup: 'spice',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'tsp',
+    },
+  },
+  {
+    id: '38',
+    label: 'Mustard seeds',
+    foodGroup: {
+      foodGroup: 'spice',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'tsp',
+    },
+  },
+  {
+    id: '39',
+    label: 'Fish stock',
+    foodGroup: {
+      foodGroup: 'stock',
+    },
+    units: {
+      standard: 'ml',
+    },
+  },
+  {
+    id: '40',
+    label: 'Smoked haddock',
+    foodGroup: {
+      foodGroup: 'fish',
+    },
+    units: {
+      standard: 'g',
+    },
+  },
+  {
+    id: '41',
+    label: 'Parsley',
+    foodGroup: {
+      foodGroup: 'herb',
+      countsAsPlant: true,
+    },
+    units: {
+      standard: 'handful',
+    },
+  },
+  {
+    id: '42',
+    label: 'Egg',
+    foodGroup: {
+      foodGroup: 'egg',
+    },
+  },
+  {
+    id: '43',
+    label: 'Lemon',
+    foodGroup: {
+      category: 'fruit',
+      countsAsPlant: true,
+    },
+  },
+  {
+    id: '44',
+    label: 'Yoghurt',
+    foodGroup: {
+      foodGroup: 'yoghurt',
+    },
+    units: {
+      standard: 'ml',
+    },
+  },
 ];
