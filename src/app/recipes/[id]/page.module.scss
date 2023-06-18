@@ -13,9 +13,8 @@
 
 .metaDataWrapper {
   display: flex;
-  gap: var(--spacing-unit-6);
+  gap: var(--spacing-unit-5);
   margin-bottom: var(--spacing-unit-3);
-  justify-content: space-between;
 }
 
 @media (min-width: $breakpointM) {
@@ -59,3 +58,16 @@
   height: 100%;
   object-fit: cover;
 }
+
+.listHeading {
+  > div {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-unit-1);
+  }
+  color: var(--text-secondary);
+  font-size: var(--font-size-14);
+  margin-bottom: var(--spacing-unit-8);
+  @include underlineSecondary;
+}
+

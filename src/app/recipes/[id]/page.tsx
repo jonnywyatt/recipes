@@ -9,6 +9,7 @@ import { PreparationTime } from '@/components/PreparationTime';
 import { makeImageSrcSet } from '@/app/(recipes)/utils';
 import { VegCount } from '@/components/VegCount';
 import { IconLeaf } from '@/images/icons/IconLeaf';
+import Link from 'next/link';
 
 export const dynamic = 'force-dynamic';
 interface PageProps {
@@ -22,10 +23,7 @@ export default async function Recipe({ params }: PageProps) {
         <h1 className={styles.heading}>{recipe.title}</h1>
         <div className={styles.metaDataWrapper}>
           <Tags tags={recipe.tags} />
-          <div className={`${flex.flexSpaceBetween} ${flex.flexGap4Units}`}>
-            <VegCount count={recipe.vegCount} isLarge={true} />
-            <PreparationTime time={recipe.preparationTimeMin} isLarge={true} />
-          </div>
+          <PreparationTime time={recipe.preparationTimeMin} isLarge={true} />
         </div>
       </div>
       <div className={`${grid.fullBleed} ${styles.contentWrapper}`}>
@@ -44,9 +42,25 @@ export default async function Recipe({ params }: PageProps) {
           <Tabs defaultSelectedTab="tab1">
             <TabList aria-label="jser tabs">
               <Tab tab="tab1">Ingredients</Tab>
-              <Tab tab="tab2">Method</Tab>
+              <Tab tab="tab2">Steps</Tab>
             </TabList>
             <TabPanel tab="tab1">
+              <div className={styles.listHeading}>
+                <div>
+                  <IconLeaf width={20} height={20} />
+                  <span className={styles.label}>
+                    {recipe.vegCount} plant-based ingredients (
+                    <Link
+                      title="Click for more info on what counts as a plant"
+                      className={'infoLink'}
+                      href="/plants"
+                    >
+                      more info
+                    </Link>
+                    )
+                  </span>
+                </div>
+              </div>
               <List
                 list={recipe.ingredients.main}
                 renderItem={(item) => (

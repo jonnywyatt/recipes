@@ -15,7 +15,7 @@ export const VegCount = ({
         {count}{' '}
         <Link
           title="Click for more info on what counts as a plant"
-          className={styles.infoLink}
+          className={'infoLink'}
           href="/plants"
         >
           plants

@@ -94,6 +94,10 @@ a {
   text-decoration: underline;
 }
 
+.infoLink {
+  border-bottom: 1px dashed var(--grey-3b);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
