@@ -14,7 +14,6 @@ import { TagsMultiSelect } from '@/components/Tags/TagsMultiSelect';
 import { PreparationTime } from '@/components/PreparationTime';
 import { VegCount } from '@/components/VegCount';
 
-export const dynamic = 'force-dynamic';
 interface PageProps {
   searchParams: QsMap;
 }

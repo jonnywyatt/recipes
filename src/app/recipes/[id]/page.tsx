@@ -10,7 +10,6 @@ import { makeImageSrcSet } from '@/app/(recipes)/utils';
 import { IconLeaf } from '@/images/icons/IconLeaf';
 import Link from 'next/link';
 
-export const dynamic = 'force-dynamic';
 interface PageProps {
   params: { [key: string]: string | undefined };
 }
