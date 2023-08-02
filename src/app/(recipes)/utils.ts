@@ -1,7 +1,7 @@
 import qs from 'qs';
 import { Api, DecoratedTag } from '@/app/api/api';
-import Tag = Api.Tag;
 import { getData } from '@/app/utils/getData';
+import Tag = Api.Tag;
 
 export const parseSelectedTags = (tags: string | string[] | undefined) => {
   const list = Array.isArray(tags) ? tags : [tags];
@@ -72,4 +72,20 @@ export const makeImageSrcSet = (
   return imageData
     .map(({ fileName, width }) => `/images/${fileName} ${width}w`)
     .join(', ');
+};
+
+export const getTagsAndRecipes = async (selectedTags: number[]) => {
+  const [tags, recipes] = await Promise.allSettled([
+    getData('/api/tags'),
+    getRecipes(selectedTags),
+  ]);
+  if (tags.status === 'rejected') {
+    console.error(tags.reason);
+    throw tags.reason;
+  }
+  if (recipes.status === 'rejected') {
+    console.error(recipes.reason);
+    throw recipes.reason;
+  }
+  return { tags: tags.value, recipes: recipes.value };
 };

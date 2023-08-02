@@ -1,12 +1,11 @@
 import styles from './page.module.scss';
-import { getData } from '@/app/utils/getData';
 import { Tags } from '@/components/Tags';
 import Link from 'next/link';
 import grid from '@/app/styles/grid.module.css';
 import {
   countLabelSuffix,
   decorateTags,
-  getRecipes,
+  getTagsAndRecipes,
   makeImageSrcSet,
   parseSelectedTags,
   QsMap,
@@ -22,9 +21,8 @@ interface PageProps {
 
 export default async function Home({ searchParams }: PageProps) {
   const selectedTags = parseSelectedTags(searchParams.tags);
-  const allTags = await getData('/api/tags');
-  const recipes = await getRecipes(selectedTags);
-  const decoratedTags = decorateTags({ allTags, selectedTags });
+  const { tags, recipes } = await getTagsAndRecipes(selectedTags);
+  const decoratedTags = decorateTags({ allTags: tags, selectedTags });
   return (
     <main className={grid.gridColumnCenter}>
       <div className={styles.tagWrapper}>
