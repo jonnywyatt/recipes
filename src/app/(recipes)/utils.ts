@@ -4,13 +4,10 @@ import Tag = Api.Tag;
 import { getData } from '@/app/utils/getData';
 
 export const parseSelectedTags = (tags: string | string[] | undefined) => {
-  if (Array.isArray(tags)) {
-    return tags;
-  }
-  if (tags) {
-    return [tags];
-  }
-  return [];
+  const list = Array.isArray(tags) ? tags : [tags];
+  return list
+    .filter((tag) => typeof tag !== 'undefined')
+    .map((tag) => parseInt(tag as string, 10));
 };
 
 export const decorateTags = ({
@@ -18,7 +15,7 @@ export const decorateTags = ({
   selectedTags,
 }: {
   allTags: Tag[];
-  selectedTags: string[];
+  selectedTags: number[];
 }) =>
   allTags.map((tag: Api.Tag) => ({
     ...tag,
@@ -26,7 +23,7 @@ export const decorateTags = ({
     href: '/',
   }));
 
-export const getRecipes = async (selectedTags: string[]) => {
+export const getRecipes = async (selectedTags: number[]) => {
   const url = selectedTags.length
     ? `/api/recipes?tags=${selectedTags.join(',')}`
     : '/api/recipes';
@@ -40,7 +37,7 @@ export const makeQueryString = ({
   val,
 }: {
   tags: DecoratedTag[];
-  val: string;
+  val: number;
 }) => {
   const updatedTags = tags.map((tag) => {
     if (tag.id === val) {

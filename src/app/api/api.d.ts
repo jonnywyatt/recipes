@@ -1,6 +1,6 @@
 namespace Api {
   interface Tag {
-    id: string;
+    id: number;
     label: string;
   }
 }
@@ -28,11 +28,11 @@ export interface Recipe {
 }
 
 interface Ingredient {
-  id: string;
-  label?: string;
+  id: number;
+  label: string | null;
   foodGroup?: {
-    category: 'vegetable' | 'herb' | 'grain' | 'stock';
-    countsAsPlant?: boolean;
+    category: string;
+    countsAsPlant: boolean | null;
   };
 }
 

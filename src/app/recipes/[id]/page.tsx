@@ -7,7 +7,6 @@ import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
 import { PreparationTime } from '@/components/PreparationTime';
 import { makeImageSrcSet } from '@/app/(recipes)/utils';
-import { VegCount } from '@/components/VegCount';
 import { IconLeaf } from '@/images/icons/IconLeaf';
 import Link from 'next/link';
 
@@ -62,7 +61,7 @@ export default async function Recipe({ params }: PageProps) {
                 </div>
               </div>
               <List
-                list={recipe.ingredients.main}
+                list={recipe.ingredients}
                 renderItem={(item) => (
                   <div
                     className={`${flex.flexVerticalCenter} ${flex.flexGap1Unit}`}
