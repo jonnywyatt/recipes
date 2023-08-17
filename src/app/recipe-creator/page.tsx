@@ -5,6 +5,7 @@ import grid from '@/app/styles/grid.module.css';
 import { FormEvent, useState } from 'react';
 import forms from '@/app/styles/forms.module.scss';
 import spacing from '@/app/styles/spacing.module.scss';
+import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
 import { fetchHelper } from '@/app/utils/fetchHelper';
 import { IngredientsList } from '@/app/recipe-creator/IngredientsList';
 import { useClientDataOnMount } from '@/app/utils/useFetchHelper';
@@ -104,7 +105,10 @@ export default function Ingredients() {
         <h1 className={forms.heading}>Add a recipe</h1>
         {recipeId && (
           <div className={spacing.marginBottom6}>
-            Recipe created. <a href={`/recipes/${recipeId}`}>View</a>
+            Recipe created.{' '}
+            <a className={buttonsLinks.textLink} href={`/recipes/${recipeId}`}>
+              View
+            </a>
           </div>
         )}
         <form onSubmit={handleSubmit}>
