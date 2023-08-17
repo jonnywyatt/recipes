@@ -37,6 +37,11 @@
   @include underline;
 }
 
+@mixin headingMedium {
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-unit-2);
+}
+
 $breakpointXS: 480px;
 $breakpointM: 768px;
 $breakpointL: 1025px;

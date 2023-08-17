@@ -1,10 +1,11 @@
 import { ReactFCWithChildren } from '@/react';
 import styles from './styles.module.scss';
-import { Ingredient } from '@/app/api/api';
+
+import { IngredientDetails } from '@/app/api/api';
 
 interface Props {
-  list: Ingredient[];
-  renderItem: (item: Ingredient) => JSX.Element;
+  list: IngredientDetails[];
+  renderItem: (item: IngredientDetails) => JSX.Element;
 }
 
 export const List: ReactFCWithChildren<Props> = ({ list, renderItem }) => {

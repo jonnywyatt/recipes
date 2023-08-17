@@ -1,0 +1,93 @@
+@import "./mixins";
+
+.heading {
+  @include heading;
+  @include headingLarge;
+  margin-bottom: var(--spacing-unit-8);
+}
+
+.subHeading {
+  @include heading;
+  @include headingMedium;
+}
+
+.contentWrapper {
+  background-color: var(--grey-7);
+  padding: 5% 10%;
+  @media (min-width: 768px) {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: var(--spacing-unit-2);
+}
+
+.fieldGroup {
+  border: 0 none;
+  margin-bottom: var(--spacing-unit-5);
+}
+
+.buttonInline {
+  background-color: var(--grey-6b);
+  border: 2px solid var(--grey-6b);
+  border-radius: 4px;
+  padding: var(--spacing-unit-1) var(--spacing-unit-2);
+}
+
+.buttonPrimary {
+  background-color: var(--green-dark);
+  color: var(--white);
+  border-radius: 4px;
+  padding: var(--spacing-unit-2) var(--spacing-unit-4);
+}
+
+@mixin input {
+  border: 1px solid var(--grey-5);
+  color: var(--grey-2);
+  border-radius: 4px;
+  padding: var(--spacing-unit-1) var(--spacing-unit-2);
+  font-size: var(--font-size-14);
+}
+
+@mixin inputWide {
+  width: 100%;
+  @media (min-width: 1024px) {
+    width: 70%;
+  }
+}
+
+.input,
+.select {
+  @include input;
+}
+
+.inputLarge {
+  @include input;
+  @include inputWide;
+  font-size: var(--font-size-18);
+  padding: var(--spacing-unit-2) var(--spacing-unit-4);
+}
+
+.textArea {
+  @include input;
+  @include inputWide;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: var(--spacing-unit-5);
+  caption {
+    text-align: left;
+    margin-bottom: var(--spacing-unit-4);
+  }
+  th, td {
+    text-align: left;
+    padding: var(--spacing-unit-1) var(--spacing-unit-2) var(--spacing-unit-1) 0;
+  }
+}

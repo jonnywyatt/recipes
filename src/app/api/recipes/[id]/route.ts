@@ -12,7 +12,11 @@ export async function GET(
       id,
     },
     include: {
-      tags: true,
+      tags: {
+        include: {
+          tag: true,
+        },
+      },
       images: {
         include: {
           image: true,
@@ -23,6 +27,7 @@ export async function GET(
           ingredient: {
             include: {
               foodGroup: true,
+              servingUnit: true,
             },
           },
         },

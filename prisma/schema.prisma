@@ -20,19 +20,33 @@ model FoodGroup {
 }
 
 model Ingredient {
-  id          Int                 @id @default(autoincrement())
-  label       String?
-  foodGroup   FoodGroup           @relation(fields: [foodGroupId], references: [id])
-  foodGroupId Int
-  unit        String?
-  ingredients RecipeIngredients[]
+  id            Int                 @id @default(autoincrement())
+  label         String?
+  foodGroup     FoodGroup           @relation(fields: [foodGroupId], references: [id])
+  foodGroupId   Int
+  servingUnit   ServingUnit?         @relation(fields: [servingUnitId], references: [id])
+  servingUnitId Int?
+  ingredients   RecipeIngredients[]
 }
 
 model Tag {
-  id       Int     @id @default(autoincrement())
-  label    String
-  recipe   Recipe? @relation(fields: [recipeId], references: [id])
-  recipeId Int?
+  id         Int          @id @default(autoincrement())
+  label      String
+  RecipeTags RecipeTags[]
+}
+
+model RecipeTags {
+  id       Int    @id @default(autoincrement())
+  recipe   Recipe @relation(fields: [recipeId], references: [id])
+  recipeId Int
+  tag      Tag    @relation(fields: [tagId], references: [id])
+  tagId    Int
+}
+
+model ServingUnit {
+  id          Int          @id @default(autoincrement())
+  label       String
+  ingredients Ingredient[]
 }
 
 model Image {
@@ -61,11 +75,11 @@ model RecipeIngredients {
 }
 
 model Recipe {
-  id          Int                 @id @default(autoincrement())
-  title       String
-  images      RecipeImages[]
-  tags        Tag[]
-  ingredients RecipeIngredients[]
-  steps       String[]
-  preparationTimeMin Int @default(0)
+  id                 Int                 @id @default(autoincrement())
+  title              String
+  images             RecipeImages[]
+  tags               RecipeTags[]
+  ingredients        RecipeIngredients[]
+  steps              String[]
+  preparationTimeMin Int                 @default(0)
 }

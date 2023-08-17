@@ -1,3 +1,7 @@
+import { Recipe } from '@prisma/client';
+import { IngredientPostData } from '@/app/recipe-creator/AddIngredient';
+import { Ingredient } from '@prisma/client';
+
 namespace Api {
   interface Tag {
     id: number;
@@ -15,32 +19,25 @@ interface Image {
   width: number;
 }
 
-export interface Recipe {
-  id: string;
-  title: string;
+export interface RecipeDecorated extends Recipe {
   images: Image[];
   tags: Tag[];
-  vegCount?: number;
-  ingredients: {
-    main: Ingredient[];
-    flavourBoosters: any[];
-  };
+  vegCount: number;
+  ingredients: IngredientWithFoodGroup[];
 }
 
-interface Ingredient {
+interface IngredientWithFoodGroup extends Ingredient {
   id: number;
   label: string | null;
+  unit: string;
   foodGroup?: {
     category: string;
     countsAsPlant: boolean | null;
   };
-}
-
-export interface IngredientDetails {
-  id: string;
-  label: string;
-  units?: {
-    standard: string;
-    standardPlural?: string;
+  servingUnit?: {
+    id: number;
+    label: string;
   };
 }
+
+export type IngredientDetails = IngredientPostData & IngredientWithFoodGroup;

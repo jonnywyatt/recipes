@@ -1,6 +1,6 @@
 import './styles/globals.css';
 import grid from './styles/grid.module.css';
-import flex from './styles/flex.module.css';
+import flex from './styles/flex.module.scss';
 import header from './styles/header.module.scss';
 import footer from './styles/footer.module.scss';
 import styles from './layout.module.scss';

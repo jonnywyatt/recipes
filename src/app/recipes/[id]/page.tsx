@@ -1,7 +1,7 @@
-import { getData } from '@/app/utils/getData';
+import { fetchHelper } from '@/app/utils/fetchHelper';
 import styles from './page.module.scss';
 import grid from '@/app/styles/grid.module.css';
-import flex from '../../styles/flex.module.css';
+import flex from '../../styles/flex.module.scss';
 import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
@@ -14,7 +14,7 @@ interface PageProps {
   params: { [key: string]: string | undefined };
 }
 export default async function Recipe({ params }: PageProps) {
-  const recipe = await getData(`/api/recipes/${params.id}`);
+  const recipe = await fetchHelper(`/api/recipes/${params.id}`);
   return (
     <>
       <div className={grid.gridColumnCenter}>

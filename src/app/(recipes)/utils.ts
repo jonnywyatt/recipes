@@ -1,6 +1,6 @@
 import qs from 'qs';
 import { Api, DecoratedTag } from '@/app/api/api';
-import { getData } from '@/app/utils/getData';
+import { fetchHelper } from '@/app/utils/fetchHelper';
 import Tag = Api.Tag;
 
 export const parseSelectedTags = (tags: string | string[] | undefined) => {
@@ -27,7 +27,7 @@ export const getRecipes = async (selectedTags: number[]) => {
   const url = selectedTags.length
     ? `/api/recipes?tags=${selectedTags.join(',')}`
     : '/api/recipes';
-  return getData(url);
+  return fetchHelper(url);
 };
 
 export type QsMap = Record<string, string | string[] | undefined>;
@@ -76,7 +76,7 @@ export const makeImageSrcSet = (
 
 export const getTagsAndRecipes = async (selectedTags: number[]) => {
   const [tags, recipes] = await Promise.allSettled([
-    getData('/api/tags'),
+    fetchHelper('/api/tags'),
     getRecipes(selectedTags),
   ]);
   if (tags.status === 'rejected') {

@@ -1,5 +1,3 @@
-import { Ingredient } from '@/app/api/api';
-
 const unitNoPlural = ['g', 'ml', 'tsp', 'tbsp'];
 const pluralise = ({ unit, quantityMin, quantityMax }: any) => {
   if (!unit || typeof quantityMin === 'undefined') return '';
@@ -27,12 +25,12 @@ const formatQuantity = ({ quantityMin, quantityMax }: any) => {
 export const formatIngredient = ({
   quantityMin,
   quantityMax,
-  unit,
+  servingUnit,
   label,
 }: any) => {
   const formattedQuantity = formatQuantity({ quantityMin, quantityMax });
   const units = pluralise({
-    unit,
+    unit: servingUnit?.label,
     quantityMin,
     quantityMax,
   });
@@ -41,7 +39,8 @@ export const formatIngredient = ({
   }
   return `${formattedQuantity} ${label.toLowerCase()}`;
 };
-export const getVegCountForRecipe = (ingredients: Ingredient[]) => {
+/// TODO - remove any
+export const getVegCountForRecipe = (ingredients: any[]) => {
   return ingredients.filter(
     (ingredient) => ingredient.foodGroup?.countsAsPlant === true
   ).length;
@@ -57,10 +56,14 @@ export const transformRecipe = (recipe: any) => {
   const images = recipe.images.map((image: any) => ({
     ...image.image,
   }));
+  const tags = recipe.tags.map((tag: any) => ({
+    ...tag.tag,
+  }));
   return {
     ...recipe,
     ingredients,
     images,
+    tags,
     vegCount: getVegCountForRecipe(ingredients),
   };
 };
