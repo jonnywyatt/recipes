@@ -2,6 +2,7 @@ import { fetchHelper } from '@/app/utils/fetchHelper';
 import styles from './page.module.scss';
 import grid from '@/app/styles/grid.module.css';
 import flex from '../../styles/flex.module.scss';
+import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
 import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
@@ -50,7 +51,7 @@ export default async function Recipe({ params }: PageProps) {
                     {recipe.vegCount} plant-based ingredients (
                     <Link
                       title="Click for more info on what counts as a plant"
-                      className={'infoLink'}
+                      className={buttonsLinks.infoLink}
                       href="/plants"
                     >
                       more info

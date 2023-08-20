@@ -1,5 +1,6 @@
 import grid from '@/app/styles/grid.module.css';
 import styles from './page.module.scss';
+import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
 
 export default async function PlantsInfo() {
   return (
@@ -11,7 +12,7 @@ export default async function PlantsInfo() {
         <p>
           The Zoe project website has more details on{' '}
           <a
-            className={'textLink'}
+            className={buttonsLinks.textLink}
             href={'https://joinzoe.com/learn/30-plants-per-week#what-counts?'}
           >
             what counts as a plant
