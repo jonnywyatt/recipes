@@ -3,6 +3,7 @@
 .heading {
   @include heading;
   @include headingLarge;
+  margin-bottom: var(--spacing-unit-10);
 }
 
 .imageWrapper {
@@ -11,6 +12,7 @@
   width: 100%;
   object-fit: contain;
   @include imageBorder;
+  margin-bottom: var(--spacing-unit-8);
 }
 
 .image {
@@ -21,10 +23,9 @@
 }
 
 .textBlock {
-  margin-top: var(--spacing-unit-8);
-
   p {
     color: var(--text-primary);
+    line-height: 1.6;
     margin-bottom: var(--spacing-unit-4);
   }
 }
@@ -33,7 +34,7 @@
   .content {
     display: flex;
     flex-direction: row-reverse;
-    gap: var(--spacing-unit-4);
+    gap: var(--spacing-unit-8);
     align-items: flex-start;
 
     > * {
