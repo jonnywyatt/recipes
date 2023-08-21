@@ -41,7 +41,7 @@ export default async function PlantsInfo() {
           <p>
             Portion size doesn&apos;t really matter; it&apos;s the variety of
             different plant-based foods in your diet, that matters. A pinch of
-            dried herbs counts the same as plateful of salad.
+            dried herbs counts the same as a plateful of salad.
           </p>
           <p>
             The Zoe project website has more details on{' '}
