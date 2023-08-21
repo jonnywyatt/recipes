@@ -34,13 +34,14 @@ export default async function PlantsInfo() {
             is to eat at least 30 different plant-based foods per week.
           </p>
           <p>
-            But it's not as daunting as it sounds - a wide range of foods count
-            as plant-based including grains, nuts, seeds, herbs, and spices.
+            But it&apos;s not as daunting as it sounds - a wide range of foods
+            count as plant-based including grains, nuts, seeds, herbs, and
+            spices.
           </p>
           <p>
-            Portion size doesn't really matter; it's the variety of different
-            plant-based foods in your diet, that matters. A pinch of dried herbs
-            counts the same as plateful of salad.
+            Portion size doesn&apos;t really matter; it&apos;s the variety of
+            different plant-based foods in your diet, that matters. A pinch of
+            dried herbs counts the same as plateful of salad.
           </p>
           <p>
             The Zoe project website has more details on{' '}
