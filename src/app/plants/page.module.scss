@@ -5,10 +5,40 @@
   @include headingLarge;
 }
 
+.imageWrapper {
+  position: relative;
+  padding-bottom: clamp(40%, 60vw, 50%);
+  width: 100%;
+  object-fit: contain;
+  @include imageBorder;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .textBlock {
   margin-top: var(--spacing-unit-8);
+
   p {
     color: var(--text-primary);
     margin-bottom: var(--spacing-unit-4);
   }
+}
+
+@media (min-width: $breakpointM) {
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: var(--spacing-unit-4);
+    align-items: flex-start;
+
+    > * {
+      flex-basis: 50%;
+    }
+  }
+
 }
