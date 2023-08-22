@@ -15,7 +15,7 @@
 .list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 1.5rem;
+  grid-gap: var(--spacing-unit-5);
   width: 100%;
 }
 
@@ -69,5 +69,5 @@
 .noWrap {
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--spacing-unit-3);
+  gap: var(--spacing-unit-2);
 }
