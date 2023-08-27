@@ -12,7 +12,8 @@
 }
 
 .contentWrapper {
-  background-color: var(--grey-7);
+  background-color: var(--background-form);
+  border-radius: var(--border-radius);
   padding: 5% 10%;
   @media (min-width: 768px) {
     width: 70%;

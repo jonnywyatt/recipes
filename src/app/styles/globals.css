@@ -6,6 +6,7 @@
 
   --white: #ffffff;
   --green-dark: #0c6b58;
+  --green-pale: rgba(142, 237, 199, 0.2);
   --blue: #0d3aad;
 
   --grey-1: #222222;
@@ -28,6 +29,7 @@
   --background-primary: var(--white);
   --background-secondary: var(--grey-7);
   --border-primary: var(--green-dark);
+  --background-form: var(--green-pale);
 
   --spacing-unit-1: 5px;
   --spacing-unit-2: 10px;
