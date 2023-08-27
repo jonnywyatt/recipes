@@ -8,7 +8,7 @@
 
 .imageWrapper {
   position: relative;
-  padding-bottom: clamp(40%, 60vw, 50%);
+  padding-bottom: 50%;
   width: 100%;
   object-fit: contain;
   @include imageBorder;
@@ -39,6 +39,9 @@
 
     > * {
       flex-basis: 50%;
+    }
+    .imageWrapper {
+      padding-bottom: 30%;
     }
   }
 
