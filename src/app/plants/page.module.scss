@@ -31,18 +31,10 @@
 }
 
 @media (min-width: $breakpointM) {
-  .content {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: var(--spacing-unit-8);
-    align-items: flex-start;
-
-    > * {
-      flex-basis: 50%;
-    }
-    .imageWrapper {
-      padding-bottom: 30%;
-    }
+  .imageWrapper {
+    float: right;
+    width: 50%;
+    margin-left: var(--spacing-unit-10);
+    padding-bottom: 30%;
   }
-
 }
