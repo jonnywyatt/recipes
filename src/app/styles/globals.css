@@ -24,6 +24,7 @@
 
   /* Mappings */
   --text-primary: var(--grey-2b);
+  --text-primary-active: var(--grey-1);
   --text-secondary: var(--grey-3);
   --heading: var(--grey-2);
   --background-primary: var(--white);

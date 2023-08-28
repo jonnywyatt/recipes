@@ -10,7 +10,7 @@
 
 // specific to this design
 .tabList {
-  background-color: var( --background-secondary);
+  background-color: var(--background-secondary);
 }
 
 .tab {
@@ -47,6 +47,10 @@
 
 .tab[aria-selected="false"] {
   border-bottom-color: var(--border-primary);
+
+  &:hover {
+    color: var(--text-primary-active);
+  }
 }
 
 .tab:last-child {
