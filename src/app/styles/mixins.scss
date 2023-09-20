@@ -25,6 +25,20 @@
   border: 1px solid var(--grey-3);
 }
 
+@mixin imageWrapper {
+  position: relative;
+  object-fit: contain;
+  @include imageBorder;
+}
+
+@mixin image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 @mixin heading {
   font-family: var(--font-stack-heading);
   font-weight: normal;
@@ -43,5 +57,6 @@
 }
 
 $breakpointXS: 480px;
+$breakpointS: 555px;
 $breakpointM: 768px;
-$breakpointL: 1025px;
+$breakpointL: 1024px;

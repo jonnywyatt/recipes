@@ -1,7 +1,7 @@
 'use client';
 
 import { IngredientPostData } from './ChooseIngredient';
-import grid from '@/app/styles/grid.module.css';
+import grid from '@/app/styles/grid.module.scss';
 import { FormEvent, useState } from 'react';
 import forms from '@/app/styles/forms.module.scss';
 import spacing from '@/app/styles/spacing.module.scss';

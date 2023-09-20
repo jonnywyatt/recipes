@@ -15,13 +15,14 @@
 .list {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: var(--spacing-unit-5);
+  grid-gap: var(--spacing-unit-7);
   width: 100%;
 }
 
 @media (min-width: $breakpointXS) {
   .list {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: var(--spacing-unit-5);
   }
 }
 
@@ -32,17 +33,18 @@
 }
 
 .imageWrapper {
-  padding-bottom: 100%;
-  position: relative;
-  @include imageBorder;
+  @include imageWrapper;
+  padding-bottom: 65%;
+}
+
+@media (min-width: $breakpointS) {
+  .imageWrapper {
+    padding-bottom: 100%;
+  }
 }
 
 .image {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+  @include image;
 }
 
 .title {

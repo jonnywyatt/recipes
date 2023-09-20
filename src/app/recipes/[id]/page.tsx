@@ -1,6 +1,6 @@
 import { fetchHelper } from '@/app/utils/fetchHelper';
 import styles from './page.module.scss';
-import grid from '@/app/styles/grid.module.css';
+import grid from '@/app/styles/grid.module.scss';
 import flex from '../../styles/flex.module.scss';
 import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
 import { Tags } from '@/components/Tags';

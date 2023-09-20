@@ -1,4 +1,4 @@
-import grid from '@/app/styles/grid.module.css';
+import grid from '@/app/styles/grid.module.scss';
 import styles from './page.module.scss';
 import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
 

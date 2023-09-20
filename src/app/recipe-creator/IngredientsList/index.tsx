@@ -4,13 +4,13 @@ import { List } from '@/components/List';
 import flex from '@/app/styles/flex.module.scss';
 import { IconLeaf } from '@/images/icons/IconLeaf';
 import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
+import type from '@/app/styles/type.module.scss';
 import {
   AddIngredient,
   IngredientPostData,
 } from '@/app/recipe-creator/ChooseIngredient';
 import { useEffect, useState } from 'react';
 import { IconDelete } from '@/images/icons/IconDelete';
-import type from '@/app/styles/type.module.scss';
 import { Ingredient } from '@prisma/client';
 import { IngredientDetails } from '@/app/api/api';
 
@@ -80,7 +80,7 @@ export const IngredientsList = ({
                     onClick={() => onIngredientDeleted(ingredientId)}
                   >
                     <IconDelete width={18} height={18} />
-                    <span className={'visually-hidden'}>Delete</span>
+                    <span className={type.visuallyHidden}>Delete</span>
                   </button>
                 </div>
               );

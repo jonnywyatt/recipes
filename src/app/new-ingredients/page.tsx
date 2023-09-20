@@ -1,6 +1,6 @@
 'use client';
 
-import grid from '@/app/styles/grid.module.css';
+import grid from '@/app/styles/grid.module.scss';
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import forms from '@/app/styles/forms.module.scss';
 import { fetchHelper } from '@/app/utils/fetchHelper';

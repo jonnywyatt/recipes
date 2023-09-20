@@ -1,7 +1,7 @@
 import styles from './page.module.scss';
 import { Tags } from '@/components/Tags';
 import Link from 'next/link';
-import grid from '@/app/styles/grid.module.css';
+import grid from '@/app/styles/grid.module.scss';
 import {
   countLabelSuffix,
   decorateTags,

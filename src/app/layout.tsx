@@ -1,11 +1,11 @@
-import './styles/globals.css';
-import grid from './styles/grid.module.css';
+import './styles/variables.scss';
+import './styles/reset.scss';
+import grid from './styles/grid.module.scss';
 import flex from './styles/flex.module.scss';
 import header from './styles/header.module.scss';
 import footer from './styles/footer.module.scss';
 import styles from './layout.module.scss';
 import Link from 'next/link';
-import Head from 'next/head';
 import { LogoSliced } from '@/images/logos/LogoSliced';
 
 export const metadata = {
