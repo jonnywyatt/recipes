@@ -39,7 +39,7 @@ export default async function Recipe({ params }: PageProps) {
         </div>
         <div className={styles.content}>
           <Tabs defaultSelectedTab="tab1">
-            <TabList aria-label="jser tabs">
+            <TabList aria-label="Tabs for ingredients and steps">
               <Tab tab="tab1">Ingredients</Tab>
               <Tab tab="tab2">Steps</Tab>
             </TabList>
