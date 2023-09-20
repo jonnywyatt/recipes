@@ -54,7 +54,7 @@ export default async function Recipe({ params }: PageProps) {
                       className={buttonsLinks.infoLink}
                       href="/plants"
                     >
-                      more info
+                      what counts?
                     </Link>
                     )
                   </span>
