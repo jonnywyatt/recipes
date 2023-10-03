@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { useCallback, useState } from 'react';
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 const TabsContext = React.createContext<{
   selectedTab: string | null;

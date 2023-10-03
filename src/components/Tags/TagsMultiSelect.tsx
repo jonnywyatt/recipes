@@ -1,4 +1,4 @@
-import styles from './Tags.module.scss';
+import styles from './Tags.module.css';
 import React from 'react';
 import { Tag } from '@/components/Tag';
 import { DecoratedTag } from '@/app/api/api';

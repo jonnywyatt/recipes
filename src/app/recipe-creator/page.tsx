@@ -1,11 +1,8 @@
 'use client';
 
 import { IngredientPostData } from './ChooseIngredient';
-import grid from '@/app/styles/grid.module.scss';
 import { FormEvent, useState } from 'react';
-import forms from '@/app/styles/forms.module.scss';
-import spacing from '@/app/styles/spacing.module.scss';
-import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
+import forms from '@/app/styles/forms.module.css';
 import { fetchHelper } from '@/app/utils/fetchHelper';
 import { IngredientsList } from '@/app/recipe-creator/IngredientsList';
 import { useClientDataOnMount } from '@/app/utils/useFetchHelper';
@@ -100,13 +97,13 @@ export default function Ingredients() {
   };
 
   return (
-    <main className={grid.gridColumnCenter}>
+    <main className={'gridColumnCenter'}>
       <div className={forms.contentWrapper}>
         <h1 className={forms.heading}>Add a recipe</h1>
         {recipeId && (
-          <div className={spacing.marginBottom6}>
+          <div className={'marginBottom6'}>
             Recipe created.{' '}
-            <a className={buttonsLinks.textLink} href={`/recipes/${recipeId}`}>
+            <a className={'textLink'} href={`/recipes/${recipeId}`}>
               View
             </a>
           </div>

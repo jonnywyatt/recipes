@@ -1,16 +1,12 @@
-@mixin link {
+.buttonLink {
   color: var(--blue);
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
-
-  &:hover {
-    color: var(--grey-4b);
-  }
 }
 
-.buttonLink {
-  @include link;
+.buttonLink:hover {
+  color: var(--grey-4b);
 }
 
 .buttonIcon {

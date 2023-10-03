@@ -1,10 +1,6 @@
-import forms from '@/app/styles/forms.module.scss';
-import spacing from '@/app/styles/spacing.module.scss';
+import forms from '@/app/styles/forms.module.css';
 import { List } from '@/components/List';
-import flex from '@/app/styles/flex.module.scss';
 import { IconLeaf } from '@/images/icons/IconLeaf';
-import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
-import type from '@/app/styles/type.module.scss';
 import {
   AddIngredient,
   IngredientPostData,
@@ -45,7 +41,7 @@ export const IngredientsList = ({
     <div className={forms.fieldGroup}>
       <h2 className={forms.subHeading}>Ingredients</h2>
       {selectedIngredients.length ? (
-        <div className={spacing.marginBottom4}>
+        <div className={'marginBottom4'}>
           <List
             // @ts-ignore
             list={selectedIngredients}
@@ -58,12 +54,8 @@ export const IngredientsList = ({
               servingUnit,
             }) => {
               return (
-                <div
-                  className={`${flex.flexVerticalCenter} ${flex.flexGap4Units}`}
-                >
-                  <span
-                    className={`${flex.flexVerticalCenter} ${flex.flexGap1Unit}`}
-                  >
+                <div className={'flexVerticalCenter flexGap4Units'}>
+                  <span className={'flexVerticalCenter flexGap1Unit'}>
                     {label}
                     {foodGroup?.countsAsPlant ? (
                       <IconLeaf width={18} height={18} />
@@ -75,12 +67,12 @@ export const IngredientsList = ({
                     {servingUnit?.label || ''}
                   </span>
                   <button
-                    className={`${buttonsLinks.buttonIcon} ${type.textSecondary}`}
+                    className={`buttonIcon textSecondary`}
                     type={'button'}
                     onClick={() => onIngredientDeleted(ingredientId)}
                   >
                     <IconDelete width={18} height={18} />
-                    <span className={type.visuallyHidden}>Delete</span>
+                    <span className={'visuallyHidden'}>Delete</span>
                   </button>
                 </div>
               );
@@ -91,7 +83,7 @@ export const IngredientsList = ({
       {showAddIngredient ? null : (
         <div>
           <button
-            className={buttonsLinks.buttonLink}
+            className={'buttonLink'}
             type={'button'}
             onClick={() => setShowAddIngredient(!showAddIngredient)}
           >

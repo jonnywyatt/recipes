@@ -1,5 +1,4 @@
-import forms from '@/app/styles/forms.module.scss';
-import flex from '@/app/styles/flex.module.scss';
+import forms from '@/app/styles/forms.module.css';
 
 interface Props {
   filenameSm: string;
@@ -25,9 +24,7 @@ export const ImageFiles = ({
   return (
     <div className={forms.fieldGroup}>
       <h2 className={forms.subHeading}>Images</h2>
-      <div
-        className={`${flex.flexVerticalEnd} ${flex.flexGap4Units} ${forms.fieldGroup}`}
-      >
+      <div className={`flexVerticalEnd flexGap4Units ${forms.fieldGroup}`}>
         <div>
           <label className={forms.label} htmlFor="filename">
             Filename (sm)
@@ -56,7 +53,7 @@ export const ImageFiles = ({
           />
         </div>
       </div>
-      <div className={`${flex.flexVerticalEnd} ${flex.flexGap4Units}`}>
+      <div className={'flexVerticalEnd flexGap4Units'}>
         <div>
           <label className={forms.label} htmlFor="filename">
             Filename (lg)

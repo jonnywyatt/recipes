@@ -1,10 +1,13 @@
-import './styles/variables.scss';
-import './styles/reset.scss';
-import grid from './styles/grid.module.scss';
-import flex from './styles/flex.module.scss';
-import header from './styles/header.module.scss';
-import footer from './styles/footer.module.scss';
-import styles from './layout.module.scss';
+import './styles/variables.css';
+import './styles/reset.css';
+import './styles/grid.css';
+import './styles/flex.css';
+import './styles/spacing.css';
+import './styles/type.css';
+import header from './styles/header.module.css';
+import footer from './styles/footer.module.css';
+import './styles/buttonsLinks.css';
+import styles from './layout.module.css';
 import Link from 'next/link';
 import { LogoSliced } from '@/images/logos/LogoSliced';
 
@@ -23,9 +26,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={grid.fullWidthWithMargins}>
-          <header className={`${grid.gridColumnCenter} ${header.container}`}>
-            <div className={flex.flexSpaceBetween}>
+        <div className={'fullWidthWithMargins'}>
+          <header className={`gridColumnCenter ${header.container}`}>
+            <div className={'flexSpaceBetween'}>
               <Link href="/" className={header.logoWrapper}>
                 <LogoSliced />
               </Link>
@@ -38,12 +41,8 @@ export default async function RootLayout({
             <img className={header.furl} src={'/furl.svg'} alt="" />
           </header>
         </div>
-        <div className={`${grid.fullWidthWithMargins} ${styles.main}`}>
-          {children}
-        </div>
-        <footer
-          className={`${grid.fullWidthWithMargins} ${footer.wrapper}`}
-        ></footer>
+        <div className={`fullWidthWithMargins ${styles.main}`}>{children}</div>
+        <footer className={`fullWidthWithMargins ${footer.wrapper}`}></footer>
       </body>
     </html>
   );

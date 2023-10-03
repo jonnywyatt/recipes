@@ -1,7 +1,6 @@
-import styles from './page.module.scss';
+import styles from './page.module.css';
 import { Tags } from '@/components/Tags';
 import Link from 'next/link';
-import grid from '@/app/styles/grid.module.scss';
 import {
   countLabelSuffix,
   decorateTags,
@@ -24,7 +23,7 @@ export default async function Home({ searchParams }: PageProps) {
   const { tags, recipes } = await getTagsAndRecipes(selectedTags);
   const decoratedTags = decorateTags({ allTags: tags, selectedTags });
   return (
-    <main className={grid.gridColumnCenter}>
+    <main className={'gridColumnCenter'}>
       <div className={styles.tagWrapper}>
         <TagsMultiSelect tags={decoratedTags} />
       </div>

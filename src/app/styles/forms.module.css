@@ -1,21 +1,21 @@
-@import "./mixins";
+@value bp-medium, bp-large from "../styles/breakpoints.css";
 
 .heading {
-  @include heading;
-  @include headingLarge;
+  composes: heading from './base-classes.module.css';
+  composes: headingLarge from './base-classes.module.css';
   margin-bottom: var(--spacing-unit-8);
 }
 
 .subHeading {
-  @include heading;
-  @include headingMedium;
+  composes: heading from './base-classes.module.css';
+  composes: headingMedium from './base-classes.module.css';
 }
 
 .contentWrapper {
   background-color: var(--background-form);
   border-radius: var(--border-radius);
   padding: 5% 10%;
-  @media (min-width: 768px) {
+  @media bp-medium {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -46,7 +46,7 @@
   padding: var(--spacing-unit-2) var(--spacing-unit-4);
 }
 
-@mixin input {
+.input {
   border: 1px solid var(--grey-5);
   color: var(--grey-2);
   border-radius: 4px;
@@ -54,28 +54,28 @@
   font-size: var(--font-size-14);
 }
 
-@mixin inputWide {
+.inputWide {
   width: 100%;
-  @media (min-width: 1024px) {
+  @media bp-large {
     width: 70%;
   }
 }
 
 .input,
 .select {
-  @include input;
+  composes: input;
 }
 
 .inputLarge {
-  @include input;
-  @include inputWide;
+  composes: input;
+  composes: inputWide;
   font-size: var(--font-size-18);
   padding: var(--spacing-unit-2) var(--spacing-unit-4);
 }
 
 .textArea {
-  @include input;
-  @include inputWide;
+  composes: input;
+  composes: inputWide;
 }
 
 .table {
@@ -83,12 +83,14 @@
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: var(--spacing-unit-5);
-  caption {
-    text-align: left;
-    margin-bottom: var(--spacing-unit-4);
-  }
-  th, td {
-    text-align: left;
-    padding: var(--spacing-unit-1) var(--spacing-unit-2) var(--spacing-unit-1) 0;
-  }
+}
+.table caption {
+  text-align: left;
+  margin-bottom: var(--spacing-unit-4);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: var(--spacing-unit-1) var(--spacing-unit-2) var(--spacing-unit-1) 0;
 }

@@ -1,8 +1,5 @@
 import { fetchHelper } from '@/app/utils/fetchHelper';
-import styles from './page.module.scss';
-import grid from '@/app/styles/grid.module.scss';
-import flex from '../../styles/flex.module.scss';
-import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
+import styles from './page.module.css';
 import { Tags } from '@/components/Tags';
 import { Tab, TabList, TabPanel, Tabs } from '@/components/Tabs';
 import { List } from '@/components/List';
@@ -18,14 +15,14 @@ export default async function Recipe({ params }: PageProps) {
   const recipe = await fetchHelper(`/api/recipes/${params.id}`);
   return (
     <>
-      <div className={grid.gridColumnCenter}>
+      <div className={'gridColumnCenter'}>
         <h1 className={styles.heading}>{recipe.title}</h1>
         <div className={styles.metaDataWrapper}>
           <Tags tags={recipe.tags} />
           <PreparationTime time={recipe.preparationTimeMin} isLarge={true} />
         </div>
       </div>
-      <div className={`${grid.fullBleed} ${styles.contentWrapper}`}>
+      <div className={`fullBleed ${styles.contentWrapper}`}>
         <div className={styles.imageContainer}>
           <div className={styles.imageWrapper}>
             <img
@@ -51,7 +48,7 @@ export default async function Recipe({ params }: PageProps) {
                     {recipe.vegCount} plant-based ingredients (
                     <Link
                       title="Click for more info on what counts as a plant"
-                      className={buttonsLinks.infoLink}
+                      className={'infoLink'}
                       href="/plants"
                     >
                       what counts?
@@ -63,9 +60,7 @@ export default async function Recipe({ params }: PageProps) {
               <List
                 list={recipe.ingredients}
                 renderItem={(item) => (
-                  <div
-                    className={`${flex.flexVerticalCenter} ${flex.flexGap1Unit}`}
-                  >
+                  <div className={'flexVerticalCenter flexGap1Unit'}>
                     {item.label}
                     {item.foodGroup?.countsAsPlant ? (
                       <IconLeaf width={18} height={18} />

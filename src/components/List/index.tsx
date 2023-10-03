@@ -1,5 +1,5 @@
 import { ReactFCWithChildren } from '@/react';
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 import { IngredientDetails } from '@/app/api/api';
 

@@ -1,17 +1,17 @@
-@import "../styles/mixins";
+@value bp-medium from "../styles/breakpoints.css";
 
 .heading {
-  @include heading;
-  @include headingLarge;
+  composes: heading from '../styles/base-classes.module.css';
+  composes: headingLarge from '../styles/base-classes.module.css';
   margin-bottom: var(--spacing-unit-10);
 }
 
 .imageWrapper {
+  composes: imageBorder from '../styles/base-classes.module.css';
   position: relative;
   padding-bottom: 50%;
   width: 100%;
   object-fit: contain;
-  @include imageBorder;
   margin-bottom: var(--spacing-unit-8);
 }
 
@@ -22,15 +22,13 @@
   object-fit: cover;
 }
 
-.textBlock {
-  p {
+.textBlock  p {
     color: var(--text-primary);
     line-height: 1.6;
     margin-bottom: var(--spacing-unit-4);
-  }
 }
 
-@media (min-width: $breakpointM) {
+@media bp-medium {
   .imageWrapper {
     float: right;
     width: 50%;

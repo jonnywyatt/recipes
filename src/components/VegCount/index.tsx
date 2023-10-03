@@ -1,6 +1,5 @@
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 import Link from 'next/link';
-import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
 
 import { IconLeaf } from '@/images/icons/IconLeaf';
 export const VegCount = ({
@@ -17,7 +16,7 @@ export const VegCount = ({
         {count}{' '}
         <Link
           title="Click for more info on what counts as a plant"
-          className={buttonsLinks.infoLink}
+          className={'infoLink'}
           href="/plants"
         >
           plants

@@ -1,6 +1,4 @@
-import forms from '@/app/styles/forms.module.scss';
-import flex from '@/app/styles/flex.module.scss';
-import spacing from '@/app/styles/spacing.module.scss';
+import forms from '@/app/styles/forms.module.css';
 import { Tag } from '@prisma/client';
 
 interface Props {
@@ -21,7 +19,7 @@ export const TagsList = ({
           return (
             <div
               key={id}
-              className={`${flex.flexVerticalCenter} ${flex.flexGap2Units} ${spacing.marginBottom2}`}
+              className={`flexVerticalCenter flexGap2Units marginBottom2`}
             >
               <input
                 id={id.toString()}

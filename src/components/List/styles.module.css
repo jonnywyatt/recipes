@@ -9,7 +9,8 @@
 .listItem {
   line-height: 1.4em;
   margin-bottom: var(--spacing-unit-3);
-  &:last-child {
+}
+
+.listItem:last-child {
     margin-bottom: 0;
-  }
 }

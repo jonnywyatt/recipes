@@ -1,4 +1,4 @@
-@import "../styles/mixins";
+@value bp-xsmall, bp-small from "../styles/breakpoints.css";
 
 .loading {
   font-family: var(--font-stack-heading);
@@ -9,7 +9,7 @@
 
 .tagWrapper {
   margin-bottom: var(--spacing-unit-4);
-  @include underline;
+  composes: underline from '../styles/base-classes.module.css';
 }
 
 .list {
@@ -19,7 +19,7 @@
   width: 100%;
 }
 
-@media (min-width: $breakpointXS) {
+@media bp-xsmall {
   .list {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: var(--spacing-unit-5);
@@ -33,22 +33,22 @@
 }
 
 .imageWrapper {
-  @include imageWrapper;
+  composes: imageWrapper from '../styles/base-classes.module.css';
   padding-bottom: 65%;
 }
 
-@media (min-width: $breakpointS) {
+@media bp-small {
   .imageWrapper {
     padding-bottom: 100%;
   }
 }
 
 .image {
-  @include image;
+  composes: image from '../styles/base-classes.module.css';
 }
 
 .title {
-  @include heading;
+  composes: heading from '../styles/base-classes.module.css';
   font-size: var(--font-size-21);
   margin-bottom: var(--spacing-unit-2);
 }

@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import forms from '@/app/styles/forms.module.scss';
-import flex from '@/app/styles/flex.module.scss';
+import forms from '@/app/styles/forms.module.css';
 import { IngredientDetails } from '@/app/api/api';
 
 export interface IngredientPostData {
@@ -44,7 +43,7 @@ export const AddIngredient = ({
   };
 
   return (
-    <div className={`${flex.flexVerticalEnd} ${flex.flexGap4Units}`}>
+    <div className={'flexVerticalEnd flexGap4Units'}>
       <div>
         <label className={forms.label} htmlFor={'add-ingredient-list'}>
           Ingredient
@@ -63,7 +62,7 @@ export const AddIngredient = ({
           ))}
         </select>
       </div>
-      <div className={flex.flexAlignSelfStretch}>
+      <div className={'flexAlignSelfStretch'}>
         <div className={forms.label}>Unit</div>
         <div className={forms.input}>
           {currentIngredient?.servingUnit?.label || 'None'}

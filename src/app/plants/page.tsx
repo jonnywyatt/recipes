@@ -1,10 +1,8 @@
-import grid from '@/app/styles/grid.module.scss';
-import styles from './page.module.scss';
-import buttonsLinks from '@/app/styles/buttonsLinks.module.scss';
+import styles from './page.module.css';
 
 export default async function PlantsInfo() {
   return (
-    <main className={grid.gridColumnCenter}>
+    <main className={'gridColumnCenter'}>
       <h1 className={styles.heading}>What counts as a plant ingredient?</h1>
       <div className={styles.content}>
         <div className={styles.imageWrapper}>
@@ -26,7 +24,7 @@ export default async function PlantsInfo() {
           <p>
             The{' '}
             <a
-              className={buttonsLinks.textLink}
+              className={'textLink'}
               href={'https://joinzoe.com/learn/30-plants-per-week#what-counts?'}
             >
               recommendation by the Zoe project
@@ -46,7 +44,7 @@ export default async function PlantsInfo() {
           <p>
             The Zoe project website has more details on{' '}
             <a
-              className={buttonsLinks.textLink}
+              className={'textLink'}
               href={'https://joinzoe.com/learn/30-plants-per-week#what-counts?'}
             >
               the foods that count towards your 30 plants per week target

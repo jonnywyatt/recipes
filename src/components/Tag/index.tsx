@@ -1,4 +1,4 @@
-import styles from './Tag.module.scss';
+import styles from './Tag.module.css';
 import React from 'react';
 import Link from 'next/link';
 import { DecoratedTag } from '@/app/api/api';

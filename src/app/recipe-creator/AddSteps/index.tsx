@@ -1,4 +1,4 @@
-import forms from '@/app/styles/forms.module.scss';
+import forms from '@/app/styles/forms.module.css';
 
 interface Props {
   steps: string[];

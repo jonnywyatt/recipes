@@ -1,4 +1,4 @@
-@import "../../app/styles/mixins";
+@value bp-medium, bp-large from "../../app/styles/breakpoints.css";
 
 .tabList {
   display: flex;
@@ -8,7 +8,7 @@
   flex: 1;
 }
 
-// specific to this design
+/* specific to this design*/
 .tabList {
   background-color: var(--background-secondary);
 }
@@ -24,33 +24,33 @@
   padding-right: var(--grid-gutter-width);
   text-align: left;
   border: 1px solid transparent;
-  @media (min-width: $breakpointM) {
+  @media bp-medium {
     padding-top: var(--spacing-unit-4);
     padding-bottom: var(--spacing-unit-3);
   }
 }
 
-.tab[aria-selected="true"] {
+.tab[aria-selected='true'] {
   background-color: var(--background-primary);
   border-top-color: var(--border-primary);
 }
 
-.tab[aria-selected="true"]:first-child {
+.tab[aria-selected='true']:first-child {
   border-right: 1px solid var(--border-primary);
   border-top-right-radius: var(--spacing-unit-4);
 }
 
-.tab[aria-selected="true"]:last-child {
+.tab[aria-selected='true']:last-child {
   border-left: 1px solid var(--border-primary);
   border-top-left-radius: var(--spacing-unit-4);
 }
 
-.tab[aria-selected="false"] {
+.tab[aria-selected='false'] {
   border-bottom-color: var(--border-primary);
+}
 
-  &:hover {
-    color: var(--text-primary-active);
-  }
+.tab[aria-selected='false']:hover {
+  color: var(--text-primary-active);
 }
 
 .tab:last-child {
@@ -63,9 +63,9 @@
   padding: var(--spacing-unit-6) var(--grid-gutter-width);
 }
 
-@media (min-width: $breakpointL) {
+@media bp-large {
   .tab,
   .tabPanel {
-    padding-left: calc(var(--grid-gutter-width) * 3)
+    padding-left: calc(var(--grid-gutter-width) * 3);
   }
 }

@@ -1,11 +1,11 @@
-@import "../../styles/mixins";
+@value bp-medium, bp-large from "../../styles/breakpoints.css";
 
 .heading {
-  @include heading;
-  @include headingLarge;
+  composes: heading from '../../styles/base-classes.module.css';
+  composes: headingLarge from '../../styles/base-classes.module.css';
 }
 
-@media (min-width: $breakpointL) {
+@media bp-large {
   .contentWrapper {
     display: flex;
   }
@@ -17,7 +17,7 @@
   margin-bottom: var(--spacing-unit-3);
 }
 
-@media (min-width: $breakpointM) {
+@media bp-medium {
   .metaDataWrapper {
     width: 300px;
     margin-bottom: var(--spacing-unit-6);
@@ -30,12 +30,16 @@
 }
 
 .imageWrapper {
-  @include imageWrapper;
+  composes: imageWrapper from '../../styles/base-classes.module.css';
   padding-bottom: clamp(40%, 60vw, 50%);
   width: 100%;
 }
 
-@media (min-width: $breakpointL) {
+.image {
+  composes: image from '../../styles/base-classes.module.css';
+}
+
+@media bp-large {
   .imageContainer {
     background-color: transparent;
     padding-bottom: 0;
@@ -51,19 +55,15 @@
   }
 }
 
-.image {
-  @include image;
-}
-
 .listHeading {
-  > div {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-unit-1);
-  }
   color: var(--text-secondary);
   font-size: var(--font-size-14);
   margin-bottom: var(--spacing-unit-8);
-  @include underlineSecondary;
+  composes: underlineSecondary from '../../styles/base-classes.module.css';
 }
 
+.listHeading > div {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-unit-1);
+}

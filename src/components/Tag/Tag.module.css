@@ -8,9 +8,10 @@
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1;
-  &.isSelected, {
-    color: var(--white);
-    background-color: var(--grey-3);
-    border-color: var(--grey-3);
-  }
+}
+
+.Tag.isSelected {
+  color: var(--white);
+  background-color: var(--grey-3);
+  border-color: var(--grey-3);
 }

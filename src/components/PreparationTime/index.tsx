@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 import { IconAlarm } from '@/images/icons/IconAlarm';
 export const PreparationTime = ({
   time,

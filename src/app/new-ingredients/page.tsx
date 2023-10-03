@@ -1,13 +1,11 @@
 'use client';
 
-import grid from '@/app/styles/grid.module.scss';
 import { FormEvent, useEffect, useRef, useState } from 'react';
-import forms from '@/app/styles/forms.module.scss';
+import forms from '@/app/styles/forms.module.css';
 import { fetchHelper } from '@/app/utils/fetchHelper';
 import { useClientDataOnMount } from '@/app/utils/useFetchHelper';
 import { IngredientDetails, IngredientWithFoodGroup } from '@/app/api/api';
 import { FoodGroup, ServingUnit } from '@prisma/client';
-import flex from '@/app/styles/flex.module.scss';
 
 export default function NewIngredients() {
   const [foodGroupId, setFoodGroupId] = useState('');
@@ -46,13 +44,11 @@ export default function NewIngredients() {
   };
 
   return (
-    <main className={grid.gridColumnCenter}>
+    <main className={'gridColumnCenter'}>
       <div className={forms.contentWrapper}>
         <h1 className={forms.heading}>Add ingredients</h1>
         <form onSubmit={handleSubmit}>
-          <div
-            className={`${flex.flexVerticalEnd} ${flex.flexGap4Units} ${forms.fieldGroup}`}
-          >
+          <div className={`flexVerticalEnd flexGap4Units ${forms.fieldGroup}`}>
             <div>
               <label className={forms.label} htmlFor={'new-ingredient-label'}>
                 Name
