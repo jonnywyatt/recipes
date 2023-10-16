@@ -37,6 +37,16 @@
 
 .image {
   composes: image from '../../styles/base-classes.module.css';
+  animation: grayscaleToColour 2s ease-out 0s 1 normal forwards;
+}
+
+@keyframes grayscaleToColour {
+  100% {
+    filter: grayscale(0%);
+  }
+  0% {
+    filter: grayscale(100%);
+  }
 }
 
 @media bp-large {

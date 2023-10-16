@@ -16,13 +16,32 @@
   position: absolute;
 }
 
+@keyframes borderLength {
+  100% {
+    width: 20%;
+    opacity: 100%;
+  }
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
 .underline:after {
   content: '';
   display: block;
-  width: 20%;
   height: 1px;
   background-color: var(--green-dark);
   margin-top: var(--spacing-unit-3);
+}
+
+.underlineFixed:after {
+  width: 20%;
+}
+
+.underlineAnimate:after {
+  width: 0;
+  animation: borderLength 1s ease-out 0s 1 normal forwards;
 }
 
 .underlineSecondary:after {
@@ -43,7 +62,7 @@
 .headingLarge {
   font-size: clamp(1.5rem, 4vw, 2.2rem);
   margin-bottom: var(--spacing-unit-3);
-  composes: underline;
+  composes: underline underlineAnimate;
 }
 
 .headingMedium {

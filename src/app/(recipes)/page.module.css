@@ -9,7 +9,7 @@
 
 .tagWrapper {
   margin-bottom: var(--spacing-unit-4);
-  composes: underline from '../styles/base-classes.module.css';
+  composes: underline underlineFixed from '../styles/base-classes.module.css';
 }
 
 .list {
