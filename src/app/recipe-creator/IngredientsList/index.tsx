@@ -8,7 +8,7 @@ import {
 import { useEffect, useState } from 'react';
 import { IconDelete } from '@/images/icons/IconDelete';
 import { Ingredient } from '@prisma/client';
-import { IngredientDetails } from '@/app/api/api';
+import { IngredientDetails } from '@/app/api/api.d';
 
 interface Props {
   onIngredientAdded: (data: IngredientPostData) => void;

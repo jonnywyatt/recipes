@@ -1,7 +1,7 @@
 import styles from './Tags.module.css';
 import React from 'react';
 import { Tag } from '@/components/Tag';
-import { DecoratedTag } from '@/app/api/api';
+import { DecoratedTag } from '@/app/api/api.d';
 import { makeQueryString } from '@/app/(recipes)/utils';
 export const TagsMultiSelect: React.FC<{
   tags: DecoratedTag[];

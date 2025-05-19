@@ -1,7 +1,7 @@
 import styles from './Tag.module.css';
 import React from 'react';
 import Link from 'next/link';
-import { DecoratedTag } from '@/app/api/api';
+import { DecoratedTag } from '@/app/api/api.d';
 
 export const Tag: React.FC<DecoratedTag> = ({ isSelected, label, href }) => {
   return (

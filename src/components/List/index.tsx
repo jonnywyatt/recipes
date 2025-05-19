@@ -1,7 +1,7 @@
 import { ReactFCWithChildren } from '@/react';
 import styles from './styles.module.css';
 
-import { IngredientDetails } from '@/app/api/api';
+import { IngredientDetails } from '@/app/api/api.d';
 
 interface Props {
   list: IngredientDetails[];

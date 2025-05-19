@@ -1,5 +1,5 @@
 import qs from 'qs';
-import { Api, DecoratedTag } from '@/app/api/api';
+import { Api, DecoratedTag } from '@/app/api/api.d';
 import { fetchHelper } from '@/app/utils/fetchHelper';
 import Tag = Api.Tag;
 

@@ -12,7 +12,7 @@ import {
 import { TagsMultiSelect } from '@/components/Tags/TagsMultiSelect';
 import { PreparationTime } from '@/components/PreparationTime';
 import { VegCount } from '@/components/VegCount';
-import { RecipeDecorated } from '@/app/api/api';
+import { RecipeDecorated } from '@/app/api/api.d';
 
 interface PageProps {
   searchParams: QsMap;

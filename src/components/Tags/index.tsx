@@ -1,7 +1,7 @@
 import styles from './Tags.module.css';
 import React from 'react';
 import { Tag } from '@/components/Tag';
-import { DecoratedTag } from '@/app/api/api';
+import { DecoratedTag } from '@/app/api/api.d';
 export const Tags: React.FC<{ tags: DecoratedTag[] }> = ({ tags }) => {
   return (
     <div className={styles.Tags}>

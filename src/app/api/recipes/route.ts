@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { transformRecipe } from '@/app/api/recipes/[id]/utils';
 import { prisma } from '@/app/api/prisma';
 import { Image, RecipeIngredients } from '@prisma/client';
-import { RecipeDecorated } from '@/app/api/api';
+import { RecipeDecorated } from '@/app/api/api.d';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);

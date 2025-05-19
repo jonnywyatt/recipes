@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import forms from '@/app/styles/forms.module.css';
-import { IngredientDetails } from '@/app/api/api';
+import { IngredientDetails } from '@/app/api/api.d';
 
 export interface IngredientPostData {
   ingredientId: number;

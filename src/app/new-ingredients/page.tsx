@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 import forms from '@/app/styles/forms.module.css';
 import { fetchHelper } from '@/app/utils/fetchHelper';
 import { useClientDataOnMount } from '@/app/utils/useFetchHelper';
-import { IngredientDetails, IngredientWithFoodGroup } from '@/app/api/api';
+import { IngredientDetails, IngredientWithFoodGroup } from '@/app/api/api.d';
 import { FoodGroup, ServingUnit } from '@prisma/client';
 
 export default function NewIngredients() {

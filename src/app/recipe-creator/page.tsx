@@ -6,7 +6,7 @@ import forms from '@/app/styles/forms.module.css';
 import { fetchHelper } from '@/app/utils/fetchHelper';
 import { IngredientsList } from '@/app/recipe-creator/IngredientsList';
 import { useClientDataOnMount } from '@/app/utils/useFetchHelper';
-import { IngredientDetails, IngredientWithFoodGroup } from '@/app/api/api';
+import { IngredientDetails, IngredientWithFoodGroup } from '@/app/api/api.d';
 import { Tag } from '@prisma/client';
 import { TagsList } from '@/app/recipe-creator/Tags';
 import { ImageFiles } from '@/app/recipe-creator/ImageFiles';
